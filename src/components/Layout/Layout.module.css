@@ -1,0 +1,63 @@
+.container {
+  margin: 0 auto;
+  box-sizing: border-box;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.content {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  @media screen and (min-width: 375px) {
+    max-width: 375px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+  @media screen and (min-width: 1440px) {
+    max-width: 1440px;
+    padding: 0 100px;
+  }
+}
+.greyBackground {
+  display: flex;
+  justify-content: center;
+  background-color: var(--secondary-white-color);
+  min-width: 100vw;
+  min-height: calc(100vh - 68px);
+  @media screen and (min-width: 768px) {
+    min-height: calc(100vh - 88px);
+  }
+}
+.whiteBackground {
+  display: flex;
+  justify-content: center;
+  background-color: var(--white-color);
+  min-width: 100vw;
+  min-height: calc(100vh - 68px);
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 88px);
+    background-image: image-set(
+      url(../../../public/img/Background@1x.webp) 1x,
+      url(../../../public/img/Background@2x.webp) 2x,
+      url(../../../public/img/Background@1x.png) 1x,
+      url(../../../public/img/Background@2x.png) 2x
+    );
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 50%;
+  }
+  @media screen and (min-width: 1440px) {
+    background-size: initial;
+  }
+}
