@@ -22,6 +22,7 @@
   line-height: 100%;
   letter-spacing: 0%;
   transition: all var(--transition-duration) var(--transition-timing-function);
+  box-shadow: rgba(149, 157, 165, 0.103) 0px 8px 24px 0px;
 }
 .link:not(:last-child)::after {
   content: '';

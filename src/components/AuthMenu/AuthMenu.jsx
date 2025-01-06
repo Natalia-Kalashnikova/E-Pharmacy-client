@@ -1,8 +1,8 @@
 import { NavLink, useLocation } from 'react-router-dom';
-import css from './UserMenu.module.css';
+import css from './AuthMenu.module.css';
 import clsx from 'clsx';
 
-const UserMenu = () => {
+const AuthMenu = () => {
   const location = useLocation();
   const isHomePage = location.pathname === '/home';
   
@@ -26,4 +26,4 @@ const UserMenu = () => {
   );
 };
 
-export default UserMenu;
+export default AuthMenu;
