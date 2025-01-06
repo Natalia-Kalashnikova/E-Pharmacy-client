@@ -1,0 +1,31 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  @media screen and (min-width: 768px) {
+    gap: 14px;
+  }
+}
+.iconLogo {
+  width: 32px;
+  height: 32px;
+  @media screen and (min-width: 768px) {
+    width: 44px;
+    height: 44px;
+  }
+}
+.logoText {
+  color: var(--primary-white-color);
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: -3%;
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.logoTextBlack {
+  color: var(--primary-black-color);
+}

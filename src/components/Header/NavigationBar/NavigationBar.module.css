@@ -1,0 +1,22 @@
+.header {
+  width: 100vw;
+  background-color: var(--secondary-white-color);
+}
+
+.wrapper {
+  display: none;
+
+  @media screen and (min-width: 1440px) {
+    width: 1248px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 46px;
+    padding-top: 28px;
+    margin: 0 auto;
+  }
+}
+
+.greenBackground {
+  background-color: var(--primary-green-color);
+}
