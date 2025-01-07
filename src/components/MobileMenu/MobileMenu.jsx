@@ -11,6 +11,7 @@ const MobileMenu = () => {
     const location = useLocation();
 
     const isHomePage = location.pathname === '/home';
+    const isAuthorizationPage = location.pathname === '/login' || location.pathname === '/register';
 
     const toggleMenu = () => {
         setIsOpen(prevState => !prevState);
@@ -25,9 +26,11 @@ const MobileMenu = () => {
             {isOpen && <div className={css.overlay} onClick={toggleMenu} />}
             <div className={css.wrapper}>
                 <Logo />
+                {!isAuthorizationPage && (
                 <button type="button" className={css.button} onClick={toggleMenu}>
                     <Icon iconId="icon-burger-menu" className={clsx(css.iconMenu, { [css.iconMenuBlack]: !isHomePage })} />
                 </button>
+                )}
 
                 {isOpen && (
                     <div className={css.mobileMenu}>

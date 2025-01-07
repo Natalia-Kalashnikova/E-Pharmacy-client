@@ -10,13 +10,18 @@ import css from './NavigationBar.module.css';
 const NavigationBar = () => {
     const location = useLocation();
     const isHomePage = location.pathname === '/home';
+    const isAuthorizationPage = location.pathname === '/login' || location.pathname === '/register';
 
     return (
         <header className={clsx(css.header, { [css.greenBackground]: isHomePage })}>
             <div className={css.wrapper}>
-                <Logo />
-                <NavigationMenu />
-                <AuthMenu />
+                <Logo />                
+                {!isAuthorizationPage && (
+                    <>
+                        <NavigationMenu />
+                        <AuthMenu />
+                    </>
+                )}
             </div>
             <MobileMenu />
         </header>

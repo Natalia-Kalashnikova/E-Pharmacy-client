@@ -1,0 +1,46 @@
+.wrapper {
+  position: relative;
+}
+.paragraph {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 34px;
+  letter-spacing: 0%;
+  text-align: left;
+  @media screen and (min-width: 768px) {
+    font-size: 54px;
+    line-height: 60px;
+    letter-spacing: 0%;
+    width: 614px;
+  }
+}
+.span {
+  color: var(--primary-green-color);
+}
+.backgroundWrapper {
+  display: none;
+  @media screen and (min-width: 375px) {
+    display: block;
+    position: absolute;
+    top: -56px;
+    right: 20px;
+    width: 95px;
+    height: 93px;
+    background-image: image-set(
+      url(../../../images/tablet@1x.webp) 1x,
+      url(../../../images/tablet@2x.webp) 2x,
+      url(../../../images/tablet@1x.png) 1x,
+      url(../../../images/tablet@2x.png) 2x
+    );
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    z-index: 0;
+  }
+  @media screen and (min-width: 768px) {
+    top: -105px;
+    right: 19px;
+    width: 179px;
+    height: 175px;
+  }
+}
