@@ -1,0 +1,101 @@
+.wrapper {
+  position: relative;
+  min-height: calc(100vh - 82px);
+  box-sizing: border-box;
+  width: 100vw;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-green-color);
+
+  @media screen and (min-width: 768px) {
+    min-height: calc(100vh - 100px);
+  }
+  @media screen and (min-width: 1440px) {
+    min-height: calc(100vh - 102px);
+  }
+}
+
+.background {
+  width: 331px;
+  height: 312px;
+  position: absolute;
+  top: calc(50% - 18px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: image-set(
+    url(../../images/tablets-mobile@1x.webp) 1x,
+    url(../../images/tablets-mobile@1x.png) 1x,
+    url(../../images/tablets-mobile@2x.webp) 2x,
+    url(../../images/tablets-mobile@2x.png) 2x
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 331px 312px;
+  z-index: -1;
+
+  @media screen and (min-width: 768px) {
+    top: calc(50% - 70px);
+    left: calc(50% + 15px);
+    width: 749px;
+    height: 508px;
+    background-image: image-set(
+      url(../../images/tablets@1x.webp) 1x,
+      url(../../images/tablets@1x.png) 1x,
+      url(../../images/tablets@2x.webp) 2x,
+      url(../../images/tablets@2x.png) 2x
+    );
+    background-size: 749px 508px;
+  }
+}
+
+.textWrapper {
+  width: 335px;
+  height: 312px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1;
+
+  @media screen and (min-width: 768px) {
+    width: 609px;
+    height: 508px;
+    gap: 24px;
+  }
+}
+
+.title {
+  color: var(--primary-white-color);
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 50px;
+  letter-spacing: 0%;
+  text-align: left;
+
+  @media screen and (min-width: 768px) {
+    font-size: 74px;
+    line-height: 74px;
+    margin-top: 70px;
+  }
+}
+
+.paragraphWrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.paragraph {
+  width: 156px;
+  color: var(--primary-white-color);
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  text-align: left;
+
+  @media screen and (min-width: 768px) {
+    width: 207px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
