@@ -2,15 +2,15 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
-  padding: 40px 20px;
+  padding: 40px 0;
 
   @media screen and (min-width: 768px) {
-    padding: 60px 32px;
+    padding: 60px 0;
     gap: 64px;
   }
 
   @media screen and (min-width: 1440px) {
-    padding: 60px 96px;
+    padding: 60px 0;
   }
 }
 
@@ -52,7 +52,6 @@
 
 .storesList {
   max-width: 335px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 20px;

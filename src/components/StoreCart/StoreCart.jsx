@@ -9,7 +9,7 @@ const StoreCart = ({store}) => {
       <ReactEllipsisText
         className={css.storeName}
         text={store.name}
-        length={'15'}
+        length={15}
       />
       <div className={css.addressWrapper}>
         <Icon iconId="icon-map-pin" className={css.iconInfo} />
