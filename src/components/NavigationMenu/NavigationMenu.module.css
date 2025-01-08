@@ -3,10 +3,12 @@
   align-items: center;
   flex-direction: column;
   gap: 2px;
+
   @media screen and (min-width: 1440px) {
     flex-direction: row;
   }
 }
+
 .link {
   box-sizing: border-box;
   display: flex;
@@ -17,6 +19,7 @@
   border-radius: 60px;
   background-color: var(--primary-white-color);
   position: relative;
+
   color: var(--primary-dark-gray-color);
   font-size: 14px;
   line-height: 100%;
@@ -31,26 +34,37 @@
   height: 8px;
   position: absolute;
   bottom: -13px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 50%;
+  transform: translateX(50%);
   background-color: var(--primary-white-color);
 
   @media screen and (min-width: 1440px) {
     bottom: 50%;
-    left: auto;
     right: -17px;
     transform: translateX(0) translateY(50%) rotate(-90deg);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .wrapper .link:not(:last-child)::after {
+    bottom: 50% !important;
+    left: auto !important;
+    right: -17px !important;
+    transform: translateX(0) translateY(50%) rotate(-90deg) !important;
   }
 }
 .linkHome {
   width: 96px;
 }
+
 .linkMedicineStore {
   width: 134px;
 }
+
 .linkMedicine {
   width: 112px;
 }
+
 .active {
   background-color: var(--primary-green-color);
   color: var(--primary-white-color);

@@ -1,0 +1,94 @@
+.storeName {
+  max-width: 123px;
+  font-weight: 600;
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-align: left;
+
+  @media screen and (min-width: 768px) {
+    max-width: 160px;
+    font-size: 20px;
+  }
+}
+
+.addressWrapper {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+  @media screen and (min-width: 768px) {
+    margin-top: 6px;
+  }
+}
+
+.iconInfo {
+  width: 18px;
+  height: 18px;
+}
+
+.storeInfo {
+  max-width: 150px;
+  color: rgb(147, 147, 154);
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0%;
+  text-align: left;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.phoneWrapper {
+  display: flex;
+  gap: 8px;
+}
+
+.infoWrapper {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  display: flex;
+  gap: 14px;
+
+  @media screen and (min-width: 768px) {
+    top: 40px;
+    right: 24px;
+  }
+}
+
+.ratingWrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.iconStar {
+  width: 16px;
+  height: 16px;
+}
+
+.rating {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.openFlag {
+  border-radius: 8px;
+  padding: 8px 16px;
+  background: var(--primary-light-red-color);
+  color: var(--primary-dark-red-color);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: -2%;
+  text-align: center;
+}
+
+.open {
+  color: var(--primary-green-color);
+  background-color: var(--primary-light-green-color);
+}
