@@ -3,6 +3,7 @@ import css from './HomePage.module.css';
 import PromoBanners from '../../components/PromoBanners/PromoBanners.jsx';
 import MedicineStores from '../../components/MedicineStores/MedicineStores.jsx';
 import AddPharmacyPromo from '../../components/AddPharmacyPromo/AddPharmacyPromo.jsx';
+import ReviewsSection from "../../components/ReviewsSection/ReviewsSection.jsx";
 
 const HomePage = () => {
   return (
@@ -11,6 +12,7 @@ const HomePage = () => {
       <PromoBanners />
       <MedicineStores />
       <AddPharmacyPromo />
+      <ReviewsSection />
     </div>
   )
 };
