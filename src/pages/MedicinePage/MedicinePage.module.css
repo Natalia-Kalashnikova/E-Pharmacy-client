@@ -12,6 +12,7 @@
     gap: 32px;
   }
   @media screen and (min-width: 1440px) {
+    width: 1183px;
     min-height: calc(100vh - 102px);
     padding: 72px 0 120px;
     gap: 40px;

@@ -3,6 +3,13 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
+
+  @media screen and (min-width: 768px) {
+    gap: 32px;
+  }
+  @media screen and (min-width: 1440px) {
+    gap: 40px;
+  }
 }
 
 .title {
@@ -22,6 +29,7 @@
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
+    align-items: center;
   }
 
   @media screen and (min-width: 1440px) {
@@ -58,10 +66,6 @@
 
 .label {
   position: relative;
-
-  @media screen and (min-width: 768px) {
-    min-width: 174px;
-  }
 }
 
 .buttonCategories {
@@ -77,6 +81,10 @@
   line-height: 18px;
   letter-spacing: 0px;
   text-align: left;
+
+  @media screen and (min-width: 768px) {
+    width: 214px;
+  }
 }
 
 .buttonCategories:focus,
@@ -108,10 +116,6 @@
   pointer-events: none;
   overflow: auto;
   transition: all var(--transition-timing-function) var(--transition-duration);
-
-  @media screen and (min-width: 768px) {
-    min-width: calc(100% + 24px);
-  }
 }
 
 .visible {

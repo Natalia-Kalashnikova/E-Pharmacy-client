@@ -1,0 +1,30 @@
+.productList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px 13px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    gap: 40px 21px;
+  }
+}
+
+.productItem {
+  max-width: 335px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @media screen and (min-width: 768px) {
+    width: 226px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 280px;
+  }
+}
