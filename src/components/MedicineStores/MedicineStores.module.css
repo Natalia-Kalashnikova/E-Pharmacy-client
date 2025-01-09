@@ -108,3 +108,41 @@
     background-position: calc(100% + 100px) calc(100% + 50px);
   }
 }
+
+.medicineWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px 0 80px;
+  @media screen and (min-width: 768px) {
+    padding: 48px 0 120px;
+    gap: 32px;
+  }
+  @media screen and (min-width: 1440px) {
+    padding: 72px 0px 120px;
+    gap: 40px;
+  }
+}
+.medicineTitle {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.medicineStoreList {
+  @media screen and (min-width: 1440px) {
+    gap: 40px 21px;
+    width: 1185px;
+  }
+}
+.medicineStoreItem {
+  @media screen and (min-width: 768px) {
+    height: 276px;
+    cursor: initial;
+    background-position: calc(100% + 100px) calc(100% - 136px);
+  }
+  @media screen and (min-width: 1440px) {
+    width: 381px;
+  }
+}

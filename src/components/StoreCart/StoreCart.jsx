@@ -2,8 +2,14 @@ import ReactEllipsisText from 'react-ellipsis-text';
 import css from './StoreCart.module.css';
 import Icon from '../Icon/Icon.jsx';
 import clsx from "clsx";
+import { useNavigate } from 'react-router-dom';
 
-const StoreCart = ({store}) => {
+const StoreCart = ({ store, isMedicineStorePage }) => {
+  const navigate = useNavigate();
+  const handleBtnClick = () => {
+    navigate('/medicine');
+  };
+
     return (
     <>
       <ReactEllipsisText
@@ -19,7 +25,12 @@ const StoreCart = ({store}) => {
         <Icon iconId="icon-phone" className={css.iconInfo} />
         <p className={css.storeInfo}>{store.phone}</p>
       </div>
-      <div className={css.infoWrapper}>
+        <div className={isMedicineStorePage ? css.medicineInfoWrapper : css.infoWrapper}>
+          {isMedicineStorePage && (
+            <button type="button" className={css.button} onClick={handleBtnClick}>
+              Visit Store
+            </button>
+          )}          
         <div className={css.ratingWrapper}>
           <Icon iconId="icon-star" className={css.iconStar} />
           <span className={css.rating}>{store.rating}</span>
