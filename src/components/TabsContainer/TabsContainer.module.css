@@ -1,0 +1,30 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 20px 40px;
+  background-color: var(--primary-white-color);
+  border-radius: 27px;
+}
+.tabsWrapper {
+  display: flex;
+  gap: 8px;
+}
+.tabLink {
+  border-radius: 40px;
+  background-color: rgba(89, 177, 122, 0.1);
+  padding: 8px 25px;
+  transition: all var(--transition-duration) var(--transition-timing-function);
+  color: var(--primary-green-color);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: -5%;
+  text-align: center;
+}
+.active {
+  color: var(--primary-white-color);
+  background-color: var(--primary-green-color);
+}
+.tabContent {
+}
