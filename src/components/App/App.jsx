@@ -39,11 +39,7 @@ function App() {
           <Route path="/home" element={<HomePage />} />
           <Route path="/medicine-store" element={<MedicineStorePage />} />
           <Route path="/medicine" element={<MedicinePage />} />
-          <Route path="/product/:productId" element={
-            <PrivateRoute>
-              <ProductPage />
-            </PrivateRoute>
-          } />
+          <Route path="/product/:productId" element={<ProductPage />} />
           <Route
             path="/cart"
             element={

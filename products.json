@@ -5,8 +5,29 @@
     "name": "Aspirin",
     "suppliers": "Square",
     "stock": "12",
-    "price": "89.66",
-    "category": "Medicine"
+    "price": "89.66",    
+    "category": "Medicine",
+    "description": "Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
+    "reviews": [
+      {
+        "name": "John Doe",
+        "date": "2023-05-14",
+        "rating": 5,
+        "text": "Aspirin has been a lifesaver for my headaches. Works quickly and efficiently!"
+      },
+      {
+        "name": "Jane Smith",
+        "date": "2023-04-22",
+        "rating": 4,
+        "text": "Good product, but it upset my stomach a little."
+      },
+      {
+        "name": "Emily Clark",
+        "date": "2023-03-10",
+        "rating": 5,
+        "text": "Affordable and effective for minor aches and pains. Highly recommend!"
+      }
+    ]
   },
   {
     "id": "1",
@@ -14,8 +35,29 @@
     "name": "Paracetamol",
     "suppliers": "Acme",
     "stock": "19",
-    "price": "34.16",
-    "category": "Heart"
+    "price": "34.16",    
+    "category": "Heart",
+    "description": "Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
+    "reviews": [
+      {
+        "name": "Mike Johnson",
+        "date": "2023-06-12",
+        "rating": 5,
+        "text": "Fantastic for reducing fever and mild pains. A staple in my medicine cabinet."
+      },
+      {
+        "name": "Sarah Lee",
+        "date": "2023-05-20",
+        "rating": 4,
+        "text": "Works as expected, though it took some time to relieve my headache."
+      },
+      {
+        "name": "Chris Evans",
+        "date": "2023-04-18",
+        "rating": 5,
+        "text": "Great value for money and highly effective for common illnesses."
+      }
+    ]
   },
   {
     "id": "2",
@@ -32,8 +74,29 @@
     "name": "Acetaminophen",
     "suppliers": "ACI",
     "stock": "14",
-    "price": "28.57",
-    "category": "Hand"
+    "price": "28.57",    
+    "category": "Head",
+    "description": "Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
+    "reviews": [
+      {
+        "name": "Laura Brown",
+        "date": "2023-05-30",
+        "rating": 4,
+        "text": "Good for relieving joint pain, but I experienced mild stomach discomfort."
+      },
+      {
+        "name": "George White",
+        "date": "2023-05-10",
+        "rating": 5,
+        "text": "Highly effective for inflammation. Helped me recover from a sprained ankle."
+      },
+      {
+        "name": "Nancy Wilson",
+        "date": "2023-04-28",
+        "rating": 3,
+        "text": "Works well for pain, but be cautious if you have a sensitive stomach."
+      }
+    ]
   },
   {
     "id": "4",
@@ -41,8 +104,16 @@
     "name": "Naproxen",
     "suppliers": "Uniliver",
     "stock": "10",
-    "price": "56.34",
-    "category": "Leg"
+    "price": "56.34",    
+    "category": "Leg",
+    "description": "Naproxen is an NSAID that reduces inflammation and pain, particularly useful for conditions like arthritis. Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
+    "reviews": [
+      {
+        "id": "1",
+        "text": "Naproxen works great for joint pain, but it's a bit hard on the stomach.",
+        "rating": "4"
+      }
+    ]
   },
   {
     "id": "5",
@@ -50,8 +121,16 @@
     "name": "Amoxicillin",
     "suppliers": "Square",
     "stock": "25",
-    "price": "45.99",
-    "category": "Medicine"
+    "price": "45.99",    
+    "category": "Medicine",
+    "description": "Amoxicillin is an antibiotic used to treat a wide variety of bacterial infections. It works by stopping the growth of bacteria. Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
+    "reviews": [
+      {
+        "id": "1",
+        "text": "Very effective for treating infections. It cleared up my ear infection quickly.",
+        "rating": "5"
+      }
+    ]
   },
   {
     "id": "6",
@@ -59,8 +138,16 @@
     "name": "Lisinopril",
     "suppliers": "Acme",
     "stock": "17",
-    "price": "29.88",
-    "category": "Heart"
+    "price": "29.88",    
+    "category": "Heart",
+    "description": "Lisinopril is an ACE inhibitor used to treat high blood pressure and heart failure.",
+    "reviews": [
+      {
+        "id": "1",
+        "text": "Lisinopril has helped lower my blood pressure significantly. Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
+        "rating": "5"
+      }
+    ]
   },
   {
     "id": "7",
@@ -68,8 +155,16 @@
     "name": "Ciprofloxacin",
     "suppliers": "Beximco",
     "stock": "11",
-    "price": "38.45",
-    "category": "Head"
+    "price": "38.45",   
+    "category": "Head",
+    "description": "Ciprofloxacin is an antibiotic that treats a variety of bacterial infections, particularly in the respiratory and urinary tract. Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
+    "reviews": [
+      {
+        "id": "1",
+        "text": "Cleared up my urinary tract infection fast.",
+        "rating": "5"
+      }
+    ]
   },
   {
     "id": "8",
@@ -77,8 +172,16 @@
     "name": "Hydrochlorothiazide",
     "suppliers": "ACI",
     "stock": "22",
-    "price": "24.76",
-    "category": "Hand"
+    "price": "24.76",    
+    "category": "Hand",
+    "description": "Hydrochlorothiazide is a diuretic used to treat high blood pressure and swelling caused by fluid retention. Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
+    "reviews": [
+      {
+        "id": "1",
+        "text": "Works well for reducing swelling and lowering blood pressure.",
+        "rating": "4"
+      }
+    ]
   },
   {
     "id": "9",
@@ -86,8 +189,16 @@
     "name": "Prednisone",
     "suppliers": "Uniliver",
     "stock": "15",
-    "price": "48.99",
-    "category": "Leg"
+    "price": "48.99",    
+    "category": "Leg",
+    "description": "Prednisone is a corticosteroid used to treat inflammation, allergies, and autoimmune conditions. Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
+    "reviews": [
+      {
+        "id": "1",
+        "text": "Effective for treating inflammation, but it can cause weight gain and mood swings.",
+        "rating": "3"
+      }
+    ]
   },
   {
     "id": "10",
@@ -95,8 +206,21 @@
     "name": "Propranolol",
     "suppliers": "Square",
     "stock": "18",
-    "price": "35.66",
-    "category": "Medicine"
+    "price": "35.66",    
+    "category": "Medicine",
+    "description": "Propranolol is a beta blocker used to treat high blood pressure, irregular heartbeats, and other heart conditions. Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
+    "reviews": [
+      {
+        "id": "1",
+        "text": "It helps with my anxiety and keeps my heart rate stable.",
+        "rating": "5"
+      },
+      {
+        "id": "2",
+        "text": "Good for controlling high blood pressure, but causes some dizziness.",
+        "rating": "4"
+      }
+    ]
   },
   {
     "id": "11",
@@ -104,8 +228,16 @@
     "name": "Omeprazole",
     "suppliers": "Acme",
     "stock": "14",
-    "price": "42.16",
-    "category": "Heart"
+    "price": "42.16",    
+    "category": "Head",
+    "description": "Omeprazole is used to treat acid reflux, stomach ulcers, and gastroesophageal reflux disease (GERD). Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
+    "reviews": [
+      {
+        "id": "1",
+        "text": "Helps manage my acid reflux without any side effects.",
+        "rating": "5"
+      }
+    ]
   },
   {
     "id": "12",
@@ -113,8 +245,16 @@
     "name": "Diazepam",
     "suppliers": "Beximco",
     "stock": "08",
-    "price": "27.76",
-    "category": "Head"
+    "price": "27.76",    
+    "category": "Medicine",
+    "description": "Diazepam is a sedative used to treat anxiety, muscle spasms, and seizures. Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
+    "reviews": [
+      {
+        "id": "1",
+        "text": "Helps with anxiety and muscle spasms, but can be addictive.",
+        "rating": "4"
+      }
+    ]
   },
   {
     "id": "13",
@@ -122,8 +262,21 @@
     "name": "Simvastatin",
     "suppliers": "ACI",
     "stock": "30",
-    "price": "18.57",
-    "category": "Hand"
+    "price": "18.57",    
+    "category": "Heart",
+    "description": "Simvastatin is used to lower cholesterol levels and reduce the risk of heart disease. Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
+    "reviews": [
+      {
+        "id": "1",
+        "text": "Helps maintain good cholesterol levels. No noticeable side effects.",
+        "rating": "5"
+      },
+      {
+        "id": "2",
+        "text": "Effective for lowering cholesterol, but I experienced muscle aches.",
+        "rating": "4"
+      }
+    ]
   },
   {
     "id": "14",
@@ -131,8 +284,16 @@
     "name": "Tramadol",
     "suppliers": "Uniliver",
     "stock": "13",
-    "price": "52.34",
-    "category": "Leg"
+    "price": "52.34",    
+    "category": "Leg",
+    "description": "Tramadol is a painkiller used for moderate to severe pain relief. Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
+    "reviews": [
+      {
+        "id": "1",
+        "text": "Good for pain relief, but causes drowsiness and dizziness.",
+        "rating": "4"
+      }
+    ]
   },
   {
     "id": "15",
@@ -140,8 +301,16 @@
     "name": "Losartan",
     "suppliers": "Square",
     "stock": "20",
-    "price": "31.99",
-    "category": "Medicine"
+    "price": "31.99",    
+    "category": "Medicine",
+    "description": "Losartan is used to treat high blood pressure and protect the kidneys from damage caused by diabetes. Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
+    "reviews": [
+      {
+        "id": "1",
+        "text": "Helps to control my blood pressure effectively.",
+        "rating": "5"
+      }
+    ]
   },
   {
     "id": "16",
@@ -149,8 +318,21 @@
     "name": "Metformin",
     "suppliers": "Acme",
     "stock": "12",
-    "price": "22.88",
-    "category": "Heart"
+    "price": "22.88",    
+    "category": "Hand",
+    "description": "Metformin is an oral medication used to control blood sugar levels in type 2 diabetes. Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
+    "reviews": [
+      {
+        "id": "1",
+        "text": "Helps regulate my blood sugar levels without causing too many side effects.",
+        "rating": "5"
+      },
+      {
+        "id": "2",
+        "text": "Causes some stomach discomfort, but works well for blood sugar control.",
+        "rating": "4"
+      }
+    ]
   },
   {
     "id": "17",
@@ -158,8 +340,21 @@
     "name": "Alprazolam",
     "suppliers": "Beximco",
     "stock": "09",
-    "price": "47.76",
-    "category": "Head"
+    "price": "47.76",    
+    "category": "Medicine",
+    "description": "Alprazolam is used to treat anxiety and panic disorders. Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
+    "reviews": [
+      {
+        "id": "1",
+        "text": "Effective for anxiety relief, but can be habit-forming.",
+        "rating": "4"
+      },
+      {
+        "id": "2",
+        "text": "Helps me stay calm during stressful situations, but I try to use it sparingly.",
+        "rating": "5"
+      }
+    ]
   },
   {
     "id": "18",
@@ -167,8 +362,16 @@
     "name": "Atorvastatin",
     "suppliers": "ACI",
     "stock": "18",
-    "price": "19.57",
-    "category": "Hand"
+    "price": "19.57",   
+    "category": "Head",
+    "description": "Atorvastatin is a statin medication used to lower cholesterol and reduce the risk of heart disease. Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
+    "reviews": [
+      {
+        "id": "1",
+        "text": "Helps lower my cholesterol levels effectively.",
+        "rating": "5"
+      }
+    ]
   },
   {
     "id": "19",
@@ -176,8 +379,21 @@
     "name": "Zolpidem",
     "suppliers": "Uniliver",
     "stock": "16",
-    "price": "41.34",
-    "category": "Leg"
+    "price": "41.34",    
+    "category": "Leg",
+    "description": "Zolpidem is a medication used to treat insomnia by helping people fall asleep faster. Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
+    "reviews": [
+      {
+        "id": "1",
+        "text": "Works well for sleep, but can leave me feeling groggy in the morning.",
+        "rating": "4"
+      },
+      {
+        "id": "2",
+        "text": "Great for insomnia, but I only use it when absolutely necessary.",
+        "rating": "5"
+      }
+    ]
   },
   {
     "id": "20",
@@ -185,8 +401,16 @@
     "name": "Folic Acid",
     "suppliers": "Square",
     "stock": "14",
-    "price": "15.66",
-    "category": "Medicine"
+    "price": "15.66",    
+    "category": "Supplements",
+    "description": "Folic acid is a type of B vitamin used to prevent and treat folate deficiency and reduce the risk of birth defects during pregnancy. Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
+    "reviews": [
+      {
+        "id": "1",
+        "text": "Good supplement for preventing deficiencies, easy to take.",
+        "rating": "5"
+      }
+    ]
   },
   {
     "id": "21",
@@ -194,8 +418,21 @@
     "name": "Calcium Carbonate",
     "suppliers": "Acme",
     "stock": "21",
-    "price": "18.16",
-    "category": "Heart"
+    "price": "18.16",    
+    "category": "Supplements",
+    "description": "Calcium carbonate is used to treat calcium deficiencies and improve bone health. Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
+    "reviews": [
+      {
+        "id": "1",
+        "text": "Great for strengthening bones, but a bit hard on the stomach.",
+        "rating": "4"
+      },
+      {
+        "id": "2",
+        "text": "Helps with calcium levels, but can cause constipation.",
+        "rating": "3"
+      }
+    ]
   },
   {
     "id": "22",
@@ -203,70 +440,164 @@
     "name": "Vitamin D",
     "suppliers": "Beximco",
     "stock": "16",
-    "price": "12.76",
-    "category": "Head"
+    "price": "12.76",   
+    "category": "Supplements",
+    "description": "Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
+    "reviews": [
+      {
+        "id": "1",
+        "text": "Perfect for boosting my vitamin D levels, I feel much better.",
+        "rating": "5"
+      },
+      {
+        "id": "2",
+        "text": "Good for maintaining bone health, but it can leave a weird aftertaste.",
+        "rating": "4"
+      }
+    ]
   },
   {
     "id": "23",
-    "photo": "https://i.ibb.co/GxTVSVk/shop-4-9-1000x1000-min.jpg",
+    "photo": "https://i.ibb.co/X330FTj/shop-4-10-1000x1000-min.jpg",
     "name": "Fish Oil",
     "suppliers": "ACI",
     "stock": "25",
-    "price": "23.57",
-    "category": "Hand"
+    "price": "23.57",    
+    "category": "Supplements",
+    "description": "Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
+    "reviews": [
+      {
+        "id": "1",
+        "text": "Helps with joint pain and supports heart health.",
+        "rating": "5"
+      },
+      {
+        "id": "2",
+        "text": "Good supplement, but the fishy aftertaste is unpleasant.",
+        "rating": "4"
+      }
+    ]
   },
   {
-    "id": "24",
-    "photo": "https://i.ibb.co/X330FTj/shop-4-10-1000x1000-min.jpg",
+    "id": "24",  
+    "photo": "https://i.ibb.co/bLKP624/5-15-1000x1000-min.jpg",
     "name": "Multivitamins",
     "suppliers": "Uniliver",
     "stock": "19",
-    "price": "17.34",
-    "category": "Leg"
+    "price": "17.34",    
+    "category": "Supplements",
+    "description": "Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
+    "reviews": [
+      {
+        "id": "1",
+        "text": "Great for overall health, easy to take and effective.",
+        "rating": "5"
+      },
+      {
+        "id": "2",
+        "text": "These are good but made my stomach feel a bit upset.",
+        "rating": "3"
+      }
+    ]
   },
   {
-    "id": "25",
-    "photo": "https://i.ibb.co/bLKP624/5-15-1000x1000-min.jpg",
+    "id": "25",    
+    "photo": "https://i.ibb.co/Hg0zZkQ/shop-4-7-1000x1000-min.jpg",
     "name": "Toothpaste",
     "suppliers": "Square",
     "stock": "30",
-    "price": "6.66",
-    "category": "Dental Care"
+    "price": "6.66",    
+    "category": "Oral Care",
+    "description": "Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
+    "reviews": [
+      {
+        "id": "1",
+        "text": "Very effective for keeping my teeth clean and breath fresh.",
+        "rating": "5"
+      },
+      {
+        "id": "2",
+        "text": "Good toothpaste for daily use, but a bit too minty for my taste.",
+        "rating": "4"
+      }
+    ]
   },
   {
-    "id": "26",
-    "photo": "https://i.ibb.co/Hg0zZkQ/shop-4-7-1000x1000-min.jpg",
+    "id": "26",   
+    "photo": "https://i.ibb.co/02WmJdc/5-19-1000x1000-min.jpg",
     "name": "Mouthwash",
     "suppliers": "Acme",
     "stock": "25",
-    "price": "8.16",
-    "category": "Dental Care"
+    "price": "8.16",    
+    "category": "Oral Care",
+    "description": "Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
+    "reviews": [
+      {
+        "id": "1",
+        "text": "Great for freshening breath, but can be a bit harsh on the gums.",
+        "rating": "4"
+      },
+      {
+        "id": "2",
+        "text": "Nice and refreshing, I use it every day after brushing.",
+        "rating": "5"
+      }
+    ]
   },
   {
-    "id": "27",
-    "photo": "https://i.ibb.co/02WmJdc/5-19-1000x1000-min.jpg",
+    "id": "27",    
+    "photo": "https://i.ibb.co/GxTVSVk/shop-4-9-1000x1000-min.jpg",
     "name": "Toothbrush",
     "suppliers": "Beximco",
     "stock": "20",
-    "price": "4.76",
-    "category": "Dental Care"
+    "price": "4.76",    
+    "category": "Oral Care",
+    "description": "Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
+    "reviews": [
+      {
+        "id": "1",
+        "text": "Very soft bristles, perfect for my sensitive gums.",
+        "rating": "5"
+      }
+    ]
   },
   {
-    "id": "28",
-    "photo": "https://i.ibb.co/GxTVSVk/shop-4-9-1000x1000-min.jpg",
+    "id": "28",   
+    "photo": "https://i.ibb.co/X330FTj/shop-4-10-1000x1000-min.jpg",
     "name": "Facial Cleanser",
     "suppliers": "ACI",
     "stock": "14",
-    "price": "11.57",
-    "category": "Skin Care"
+    "price": "11.57",   
+    "category": "Skin Care",
+    "description": "Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
+    "reviews": [
+      {
+        "id": "1",
+        "text": "Perfect for sensitive skin, it cleans without drying out my face.",
+        "rating": "5"
+      }
+    ]
   },
   {
-    "id": "29",
-    "photo": "https://i.ibb.co/X330FTj/shop-4-10-1000x1000-min.jpg",
+    "id": "29",  
+    "photo": "https://i.ibb.co/bLKP624/5-15-1000x1000-min.jpg",
     "name": "Moisturizer",
     "suppliers": "Uniliver",
     "stock": "18",
-    "price": "13.34",
-    "category": "Skin Care"
+    "price": "13.34",  
+    "category": "Skin Care",
+    "description": "Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
+    "reviews": [
+      {
+        "id": "1",
+        "text": "Makes my skin feel smooth and hydrated, without being greasy.",
+        "rating": "5"
+      },
+      {
+        "id": "2",
+        "text": "Great moisturizer for daily use, but it takes a bit to absorb.",
+        "rating": "4"
+      }
+    ]
   }
 ]
