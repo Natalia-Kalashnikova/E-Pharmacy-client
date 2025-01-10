@@ -1,16 +1,30 @@
 import { useMediaQuery } from "@mui/material";
 import ReactEllipsisText from "react-ellipsis-text";
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import css from './MedicineCard.module.css';
+import { useModal } from '../../context/modalContext.jsx';
+import LoginModal from '../LoginModal/LoginModal.jsx';
 
-const MedicineCard = ({product}) => {
-    const isTablet = useMediaQuery('(min-width: 768px) and (max-width: 1439px)');
+const MedicineCard = ({ product }) => {
+  const { openModal } = useModal();
+  const loggedIn = false;
+  const navigate = useNavigate();
+
+  const isTablet = useMediaQuery('(min-width: 768px) and (max-width: 1439px)');
+  
   const handleAddToCart = () => {
+    if (!loggedIn) {
+      return openModal(<LoginModal />);
+    }
     console.log(product);
-    };
+  };
+  
+  const handleDetailsClick = () => {
+    navigate(`/product/${product.id}`);
+  };
 
-    return (
-            <>
+  return (
+    <>
       <div className={css.imgWrapper}>
         <img src={product.photo} alt={product.name} className={css.image} />
       </div>
@@ -36,15 +50,17 @@ const MedicineCard = ({product}) => {
           >
             Add to cart
           </button>
-          <NavLink to={`/product/${product.id}`} className={css.buttonDetails}>
+          <button
+            type="button"
+            className={css.buttonDetails}
+            onClick={handleDetailsClick}
+          >
             Details
-          </NavLink>
+          </button>
         </div>
       </div>
     </>
-    )
-    
-
+  );
 }
 
 export default MedicineCard;

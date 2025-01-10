@@ -1,0 +1,40 @@
+.wrapper {
+  box-sizing: border-box;
+  max-width: 343px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 40px 32px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 463px;
+    padding: 50px 70px;
+  }
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.paragraph {
+  color: rgb(106, 106, 111);
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0%;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    width: 220px;
+  }
+}
