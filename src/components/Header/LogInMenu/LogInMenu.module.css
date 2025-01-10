@@ -1,0 +1,120 @@
+.mainWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  @media screen and (min-width: 768px) {
+    gap: 10px;
+  }
+}
+
+.userCart {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primary-white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid rgb(241, 241, 241);
+  box-shadow: 0px -1px 7px 0px rgba(71, 71, 71, 0.05);
+  position: relative;
+
+  @media screen and (min-width: 768px) {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+.iconCart {
+  width: 16px;
+  height: 16px;
+}
+
+.cartCount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: rgb(231, 241, 237);
+  color: rgb(89, 177, 122);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.userAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(89, 177, 122, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(89, 177, 122);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-align: left;
+
+  @media screen and (min-width: 768px) {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+  }
+}
+
+.button {
+  display: none;
+
+  @media screen and (min-width: 1440px) {
+    display: block;
+    padding: 16px 32px;
+    background-color: transparent;
+    box-sizing: border-box;
+    border: 1px solid rgba(89, 177, 122, 0.5);
+    border-radius: 60px;
+    color: var(--primary-green-color);
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: left;
+    transition: all var(--transition-duration) var(--transition-timing-function);
+  }
+}
+
+.button:hover {
+  background-color: var(--primary-green-color);
+  color: var(--primary-white-color);
+}
+
+.avatarWhiteColor {
+  background-color: var(--primary-white-color);
+  color: var(--primary-green-color);
+}
+
+.buttonWhiteColor {
+  color: var(--primary-white-color);
+  border-color: rgba(241, 241, 241, 0.5);
+}
+
+.buttonWhiteColor:hover {
+  border-color: rgba(247, 248, 250, 1);
+}

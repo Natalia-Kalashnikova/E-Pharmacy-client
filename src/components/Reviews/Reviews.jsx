@@ -1,7 +1,10 @@
+import { Rating, useMediaQuery } from '@mui/material';
 import Icon from '../../components/Icon/Icon.jsx';
 import css from './Reviews.module.css';
 
-const Reviews = ({product}) => {
+const Reviews = ({ product }) => {
+  const isMobile = useMediaQuery('(max-width:767px)');
+
     return (
     <ul className={css.wrapperList}>
       {product.reviews.map(review => (
@@ -15,7 +18,11 @@ const Reviews = ({product}) => {
               <p className={css.date}>{review.date}</p>
             </div>
             <div className={css.ratingWrapper}>
-              <Icon iconId="icon-star" className={css.starIcon} />
+              {isMobile ? (
+                <Icon iconId="icon-star" className={css.starIcon} />
+              ) : (
+                <Rating name="read-only" value={review.rating} readOnly />
+              )}
               <p className={css.ratingValue}>{review.rating}</p>
             </div>
           </div>

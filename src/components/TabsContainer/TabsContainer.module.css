@@ -5,11 +5,26 @@
   padding: 20px 20px 40px;
   background-color: var(--primary-white-color);
   border-radius: 27px;
+
+  @media screen and (min-width: 768px) {
+    box-sizing: border-box;
+    width: 704px;
+    padding: 32px 32px 64px;
+    gap: 32px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 800px;
+    padding: 40px 40px 80px;
+    gap: 40px;
+  }
 }
+
 .tabsWrapper {
   display: flex;
   gap: 8px;
 }
+
 .tabLink {
   border-radius: 40px;
   background-color: rgba(89, 177, 122, 0.1);
@@ -22,9 +37,11 @@
   letter-spacing: -5%;
   text-align: center;
 }
+
 .active {
   color: var(--primary-white-color);
   background-color: var(--primary-green-color);
 }
+
 .tabContent {
 }

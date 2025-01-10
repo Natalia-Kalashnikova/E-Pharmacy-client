@@ -13,6 +13,7 @@
   @media screen and (min-width: 1440px) {
     width: 1184px;
     flex-direction: row;
+    align-items: flex-start;
     padding: 72px 0 120px;
     gap: 20px;
   }

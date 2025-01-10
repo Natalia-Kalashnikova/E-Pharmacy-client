@@ -4,19 +4,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   @media screen and (min-width: 768px) {
     padding: 28px 32px;
   }
+
   @media screen and (min-width: 1440px) {
     display: none;
   }
 }
+
 .button {
   background-color: transparent;
   border: none;
   cursor: pointer;
   outline: none;
 }
+
 .iconMenu {
   width: 32px;
   height: 26px;
@@ -41,10 +45,12 @@
   align-items: center;
   justify-content: space-between;
   z-index: 20;
+
   @media screen and (min-width: 768px) {
     width: 334px;
   }
 }
+
 .overlay {
   position: fixed;
   top: 0;
@@ -58,6 +64,7 @@
     display: none;
   }
 }
+
 .closeBtn {
   position: absolute;
   top: 31px;
@@ -71,6 +78,7 @@
     right: 32px;
   }
 }
+
 .iconClose {
   width: 32px;
   height: 32px;
@@ -82,6 +90,7 @@
   flex-direction: column;
   gap: 14px;
 }
+
 .btnRegister {
   padding: 13px 32px;
   border: 1px solid rgba(241, 241, 241, 0.5);
@@ -93,6 +102,7 @@
   letter-spacing: 0%;
   text-align: left;
 }
+
 .btnLogin {
   color: var(--secondary-white-color);
   font-size: 14px;
@@ -101,4 +111,13 @@
   text-decoration-line: underline;
   text-align: center;
   background: transparent;
+}
+
+.userMenuWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  @media screen and (min-width: 768px) {
+    gap: 16px;
+  }
 }

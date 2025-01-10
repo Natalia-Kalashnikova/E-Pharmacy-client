@@ -1,0 +1,174 @@
+.cartList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 1440px) {
+    margin-top: 112px;
+  }
+}
+
+.cartItem {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  padding-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
+    position: relative;
+    gap: 20px;
+  }
+}
+
+.cartItem:not(:last-child) {
+  border-bottom: 1px solid rgba(29, 30, 33, 0.1);
+}
+
+.cartItem:not(:first-child) {
+  margin-top: 20px;
+}
+
+.cartItem:last-child {
+  padding-bottom: 0;
+}
+
+.productImage {
+  width: 120px;
+  height: 120px;
+  box-sizing: border-box;
+  border: 1.15px solid rgb(241, 241, 241);
+  border-radius: 27px;
+
+  @media screen and (min-width: 768px) {
+    width: 122px;
+    height: 133px;
+  }
+}
+
+.productDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    gap: 32px;
+  }
+}
+
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.productNameWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.productName {
+  font-weight: 600;
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-align: left;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+.productSupplier {
+  color: rgb(106, 106, 111);
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0%;
+  text-align: left;
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.productPrice {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0%;
+
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.btnWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.buttonAddRemoveWrapper {
+  width: 95px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 7px 14px;
+  box-sizing: border-box;
+  border: 1px solid rgba(29, 30, 33, 0.1);
+  border-radius: 60px;
+
+  @media screen and (min-width: 768px) {
+    width: 108px;
+    padding: 12px 18px;
+  }
+}
+
+.buttonAddRemove {
+  background-color: transparent;
+}
+
+.quantity {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0%;
+  text-align: right;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+
+  @media screen and (min-width: 768px) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.btnRemove {
+  color: rgb(232, 80, 80);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: -5%;
+  text-align: center;
+  padding: 8px 12px;
+  border-radius: 40px;
+  background-color: rgba(232, 80, 80, 0.1);
+}
