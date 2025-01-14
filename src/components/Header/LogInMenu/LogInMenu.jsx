@@ -2,13 +2,27 @@ import { useLocation } from 'react-router-dom';
 import clsx from 'clsx';
 import Icon from '../../Icon/Icon.jsx';
 import css from './LogInMenu.module.css';
+import { logoutAPI } from '../../../redux/auth/operations.js';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectToken, selectUserInfo } from '../../../redux/auth/selectors';
+import { useEffect } from 'react';
+import { getUserInfoAPI } from '../../../redux/auth/operations';
 
 const LogInMenu = () => {
     const location = useLocation();
-    const isHomePage = location.pathname === '/home';
+  const isHomePage = location.pathname === '/home';
+  const userInfo = useSelector(selectUserInfo);
+  const token = useSelector(selectToken);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (token) {
+      dispatch(getUserInfoAPI());
+    }
+  }, [dispatch, token]);
 
     const handleLogout = () => {
-    console.log('logout');
+     dispatch(logoutAPI());
     };
     
     return (
@@ -23,7 +37,7 @@ const LogInMenu = () => {
             [css.avatarWhiteColor]: isHomePage,
           })}
         >
-          I
+          {(userInfo && userInfo.name && userInfo.name[0]) || 'U'}
         </div>
       </div>
       <button

@@ -4,6 +4,7 @@ import toast from 'react-hot-toast';
 
 export const instance = axios.create({
   baseURL: 'https://e-pharmacy-backend-8qnu.onrender.com/',
+  withCredentials: true,
 });
 
 export const setToken = token => {
@@ -18,8 +19,8 @@ export const registerAPI = createAsyncThunk(
   'auth/register',
   async (formData, thunkApi) => {
     try {
-      const { data } = await instance.post('/user/signup', formData);
-      setToken(data.token);
+      const { data } = await instance.post('/user/register', formData);
+      setToken(data.data.accessToken);
       return data;
     } catch (e) {
       toast.error(e.message);
@@ -32,8 +33,8 @@ export const loginAPI = createAsyncThunk(
   'auth/login',
   async (formData, thunkApi) => {
     try {
-      const { data } = await instance.post('/user/signin', formData);
-      setToken(data.token);
+      const { data } = await instance.post('/user/login', formData);
+      setToken(data.data.accessToken);
       return data;
     } catch (e) {
       toast.error(e.message);
@@ -52,7 +53,7 @@ export const refreshUserAPI = createAsyncThunk(
       if (!token) return thunkApi.rejectWithValue('Token is not valid');
         setToken(token);
         
-      const { data } = await instance.get('/user/current');
+      const { data } = await instance.post('/user/refresh');
       return data;
     } catch (e) {
       if (e.response && e.response.status === 401) {
@@ -68,7 +69,7 @@ export const logoutAPI = createAsyncThunk(
   'auth/logout',
   async (_, thunkApi) => {
     try {
-      await instance.post('/user/signout');
+      await instance.post('/user/logout');
       clearToken();
       return;
     } catch (e) {

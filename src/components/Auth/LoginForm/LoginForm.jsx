@@ -8,6 +8,8 @@ import Icon from '../../Icon/Icon.jsx';
 import { useModal } from '../../../context/modalContext.jsx';
 import RegisterModal from "../../RegisterModal/RegisterModal.jsx";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from 'react-redux';
+import { loginAPI } from '../../../redux/auth/operations';
 
 
 const LoginForm = ({isModal = false}) => {
@@ -16,6 +18,7 @@ const LoginForm = ({isModal = false}) => {
   
     const { openModal, closeModal } = useModal();
   const navigate = useNavigate();
+   const dispatch = useDispatch();
 
     const {
     register,
@@ -32,9 +35,9 @@ const LoginForm = ({isModal = false}) => {
     },
   });
     
-    const onSubmit = (e, data) => {
-      console.log(data);
-      if (isModal) closeModal(e);
+    const onSubmit = (data, e) => {
+    dispatch(loginAPI(data));
+    if (isModal) closeModal(e);
 
     reset();
   };

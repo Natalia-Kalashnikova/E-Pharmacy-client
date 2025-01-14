@@ -38,29 +38,23 @@ const authSlice = createSlice({
       .addCase(registerAPI.fulfilled, (state, action) => {
         state.loading = false;
         state.isLoggedIn = true;
-        state.name = action.payload.name;
-        state.email = action.payload.email;
-        state.token = action.payload.token;
+        state.token = action.payload.data.accessToken;
       })
       
       .addCase(loginAPI.fulfilled, (state, action) => {
         state.loading = false;
         state.isLoggedIn = true;
-        state.name = action.payload.name;
-        state.email = action.payload.email;
-        state.token = action.payload.token;
+        state.token = action.payload.data.accessToken;
       })
       
       .addCase(refreshUserAPI.fulfilled, (state, action) => {
         state.loading = false;
-        state.isLoggedIn = true;
-        state.name = action.payload.name;
-        state.email = action.payload.email;
+        state.isLoggedIn = true;        
       })
      
       .addCase(getUserInfoAPI.fulfilled, (state, action) => {
         state.loading = false;
-        state.userInfo = action.payload;
+        state.userInfo = action.payload.data;
       })
       
       .addCase(logoutAPI.fulfilled, () => {

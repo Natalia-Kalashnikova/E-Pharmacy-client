@@ -8,13 +8,16 @@ import Icon from "../../Icon/Icon.jsx";
 import css from './RegistrationForm.module.css';
 import { useModal } from "../../../context/modal.js";
 import LoginModal from "../../LoginModal/LoginModal.jsx";
+import { useDispatch } from 'react-redux';
+import { registerAPI } from '../../../redux/auth/operations';
 
 const RegistrationForm = ({isModal = false}) => {
     const [showPassword, setShowPassword] = useState(false);
     const [isPasswordTouched, setIsPasswordTouched] = useState(false);
 
     const { openModal, closeModal } = useModal();
-   const navigate = useNavigate();
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
 
 const {
     register,
@@ -33,8 +36,9 @@ const {
     },
   });
     
-    const onSubmit = (e, data) => {
-        console.log(data);
+     const onSubmit = (data, e) => {
+         dispatch(registerAPI(data));
+         
         if (isModal) closeModal(e);
 
     reset();
