@@ -26,6 +26,7 @@
   border: 1px solid rgb(241, 241, 241);
   box-shadow: 0px -1px 7px 0px rgba(71, 71, 71, 0.05);
   position: relative;
+  cursor: pointer;
 
   @media screen and (min-width: 768px) {
     width: 44px;

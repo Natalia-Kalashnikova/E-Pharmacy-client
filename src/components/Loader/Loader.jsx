@@ -1,5 +1,6 @@
 import { Oval } from 'react-loader-spinner';
 import css from './Loader.module.css';
+
 const Loader = () => {
   return (
     <div className={css.background}>
@@ -10,9 +11,10 @@ const Loader = () => {
         color="#4fa94d"
         ariaLabel="oval-loading"
         wrapperStyle={{}}
-        wrapperClass=""
+        wrapperClass={css.wrapper}
       />
     </div>
   );
 };
+
 export default Loader;

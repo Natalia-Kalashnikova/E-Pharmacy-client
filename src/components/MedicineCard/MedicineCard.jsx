@@ -4,11 +4,15 @@ import { useNavigate } from "react-router-dom";
 import css from './MedicineCard.module.css';
 import { useModal } from '../../context/modalContext.jsx';
 import LoginModal from '../LoginModal/LoginModal.jsx';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectIsLoggedIn } from '../../redux/auth/selectors';
+import { updateCart } from '../../redux/cart/operations';
 
 const MedicineCard = ({ product }) => {
   const { openModal } = useModal();
-  const loggedIn = false;
+  const loggedIn = useSelector(selectIsLoggedIn);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const isTablet = useMediaQuery('(min-width: 768px) and (max-width: 1439px)');
   
@@ -16,11 +20,11 @@ const MedicineCard = ({ product }) => {
     if (!loggedIn) {
       return openModal(<LoginModal />);
     }
-    console.log(product);
+    dispatch(updateCart({ productId: product._id, quantity: 1 }));
   };
   
   const handleDetailsClick = () => {
-    navigate(`/product/${product.id}`);
+    navigate(`/product/${product._id}`);
   };
 
   return (

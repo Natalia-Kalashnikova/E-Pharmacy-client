@@ -1,36 +1,51 @@
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import clsx from 'clsx';
 import Icon from '../../Icon/Icon.jsx';
 import css from './LogInMenu.module.css';
 import { logoutAPI } from '../../../redux/auth/operations.js';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectToken, selectUserInfo } from '../../../redux/auth/selectors';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { getUserInfoAPI } from '../../../redux/auth/operations';
+import { selectCart } from '../../../redux/cart/selectors';
+import { fetchCart } from '../../../redux/cart/operations';
 
 const LogInMenu = () => {
-    const location = useLocation();
+  const [isCartFetched, setCartFetched] = useState(false);
+  const location = useLocation();
   const isHomePage = location.pathname === '/home';
   const userInfo = useSelector(selectUserInfo);
   const token = useSelector(selectToken);
   const dispatch = useDispatch();
+  const cart = useSelector(selectCart);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    if (token) {
-      dispatch(getUserInfoAPI());
-    }
-  }, [dispatch, token]);
-
-    const handleLogout = () => {
-     dispatch(logoutAPI());
+    const fetchData = async () => {
+      if (!token || isCartFetched) return;
+      if (!userInfo) {
+        await dispatch(getUserInfoAPI()).unwrap();
+      }
+      dispatch(fetchCart());
+      setCartFetched(true);
     };
+    fetchData();
+  }, [dispatch, token, userInfo, isCartFetched]);
+
+  const handleCartClick = () => {
+    navigate('/cart');
+  };
+  
+  const handleLogout = () => {
+    dispatch(logoutAPI());
+  };
     
     return (
     <div className={css.mainWrapper}>
       <div className={css.wrapper}>
-        <div className={css.userCart}>
+        <div className={css.userCart} onClick={handleCartClick}>
           <Icon iconId="icon-shopping-cart" className={css.iconCart} />
-          <span className={css.cartCount}>0</span>
+          <span className={css.cartCount}>{cart ? cart.length : 0}</span>
         </div>
         <div
           className={clsx(css.userAvatar, {

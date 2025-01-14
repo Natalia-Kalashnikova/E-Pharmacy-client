@@ -15,10 +15,11 @@ import { storesReducer } from './stores/slice';
 import { reviewsReducer } from './reviews/slice';
 import { cartReducer } from './cart/slice';
 import { productsReducer } from './products/slice';
+
 const authPersistConfig = {
   key: 'auth',
   storage,
-  whitelist: ['token'],
+  whitelist: ['token', 'userInfo'],
 };
 
 export const store = configureStore({
