@@ -7,7 +7,7 @@
     "stock": "12",
     "price": "89.66",
     "category": "Medicine",
-    "description": "Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
+    "description": "<p>Although it's typically considered safe, excessive consumption can lead to side effects. Therefore, it's recommended to consult a healthcare professional before using moringa, especially if you're pregnant, nursing, or taking other medications. This balanced approach allows for the benefits of moringa while recognizing the importance of proper usage and caution.</p><ul><li><span>Medicinal Uses: Antioxidant Properties: </span>Moringa is packed with antioxidants that help fight oxidative stress and inflammation in the body.</li><li><span>Anti-Diabetic Effects: </span>Some studies have shown that moringa leaves might lower blood sugar levels, making it a valuable supplement for managing diabetes.</li><li><span>Heart Health: </span>The plant has been linked to reduced cholesterol levels, which is vital for heart health.</li><li><span>Anti-Cancer Properties: </span></li><li><span>Immune Support: </span>With its high vitamin C content, moringa can boost the immune system.</li><li><span>Digestive Aid: </span>Moringa can help in treating digestive disorders due to its anti-inflammatory properties.</li></ul>",
     "reviews": [
       {
         "id": "0",
@@ -73,6 +73,39 @@
     "stock": "09",
     "price": "53.76",
     "category": "Head",
+    "description": "Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
+    "reviews": [
+      {
+        "id": "0",
+        "name": "Laura Brown",
+        "date": "2023-05-30",
+        "rating": 4,
+        "text": "Good for relieving joint pain, but I experienced mild stomach discomfort."
+      },
+      {
+        "id": "1",
+        "name": "George White",
+        "date": "2023-05-10",
+        "rating": 5,
+        "text": "Highly effective for inflammation. Helped me recover from a sprained ankle."
+      },
+      {
+        "id": "2",
+        "name": "Nancy Wilson",
+        "date": "2023-04-28",
+        "rating": 3,
+        "text": "Works well for pain, but be cautious if you have a sensitive stomach."
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "photo": "https://i.ibb.co/GxTVSVk/shop-4-9-1000x1000-min.jpg",
+    "name": "Acetaminophen",
+    "suppliers": "ACI",
+    "stock": "14",
+    "price": "28.57",
+    "category": "Hand",
     "description": "Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
     "reviews": [
       {
@@ -444,7 +477,7 @@
     "suppliers": "Square",
     "stock": "14",
     "price": "15.66",
-    "category": "Supplements",
+    "category": "Medicine",
     "description": "Folic acid is a type of B vitamin used to prevent and treat folate deficiency and reduce the risk of birth defects during pregnancy. Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
     "reviews": [
       {
@@ -489,7 +522,7 @@
     "suppliers": "Beximco",
     "stock": "16",
     "price": "12.76",
-    "category": "Supplements",
+    "category": "Head",
     "description": "Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
     "reviews": [
       {
@@ -515,7 +548,7 @@
     "suppliers": "ACI",
     "stock": "25",
     "price": "23.57",
-    "category": "Supplements",
+    "category": "Hand",
     "description": "Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
     "reviews": [
       {
@@ -541,7 +574,7 @@
     "suppliers": "Uniliver",
     "stock": "19",
     "price": "17.34",
-    "category": "Supplements",
+    "category": "Leg",
     "description": "Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
     "reviews": [
       {
@@ -567,7 +600,7 @@
     "suppliers": "Square",
     "stock": "30",
     "price": "6.66",
-    "category": "Oral Care",
+    "category": "Dental Care",
     "description": "Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
     "reviews": [
       {
@@ -593,7 +626,7 @@
     "suppliers": "Acme",
     "stock": "25",
     "price": "8.16",
-    "category": "Oral Care",
+    "category": "Dental Care",
     "description": "Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
     "reviews": [
       {
@@ -619,7 +652,7 @@
     "suppliers": "Beximco",
     "stock": "20",
     "price": "4.76",
-    "category": "Oral Care",
+    "category": "Dental Care",
     "description": "Although generally safe when used as directed, excessive use of this product may result in side effects. It's important to consult with a healthcare provider before using this product, especially if you are pregnant, nursing, or taking other medications. This balanced approach ensures the benefits of the product while emphasizing the need for proper use and caution.\n\nKey Benefits:\n- Supports overall health by providing essential nutrients.\n- May help in managing specific health conditions, depending on the type of product.\n- Known for its potential to enhance immune function and boost vitality.\n- Ideal for regular use to maintain well-being and support daily health needs.\n- Contains active ingredients that can contribute to your overall fitness and health goals.",
     "reviews": [
       {

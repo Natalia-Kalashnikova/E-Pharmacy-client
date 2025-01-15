@@ -4,9 +4,22 @@ import css from './CartForm.module.css';
 import { yupResolver } from '@hookform/resolvers/yup';
 import clsx from 'clsx';
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { selectCart } from '../../redux/cart/selectors';
+import { useNavigate } from 'react-router-dom';
+import { checkoutCart } from '../../redux/cart/operations';
+import { useDispatch } from 'react-redux';
 
 const CartForm = () => {
-    const [paymentType, setPaymentType] = useState('cash');
+  const [paymentType, setPaymentType] = useState('cash');
+  const cart = useSelector(selectCart);
+  const cartTotal = parseFloat(
+    cart
+      .reduce((acc, item) => acc + item.product.price * item.quantity, 0)
+      .toFixed(2)
+  );
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
     
   const {
     register,
@@ -26,8 +39,20 @@ const CartForm = () => {
   });
     
   const onSubmit = data => {
-    console.log('Form Data:', { ...data, paymentMethod: paymentType });
+     dispatch(
+      checkoutCart({
+        paymentMethod: paymentType,
+        shippingInfo: {
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          address: data.address,
+        },
+      })
+    );
+
     reset();
+    navigate('/home');
     };
     
   const handlePaymentRadioChange = e => {
@@ -162,7 +187,7 @@ const CartForm = () => {
         </div>
         <div className={css.totalWrapper}>
           <p className={css.total}>Total:</p>
-          <p className={css.totalPrice}>₴120.00</p>
+          <p className={css.totalPrice}>₴{cartTotal}</p>
         </div>
         <button type="submit" form="cart-form" className={css.button}>
           Place order

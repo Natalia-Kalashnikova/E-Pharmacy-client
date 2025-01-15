@@ -1,6 +1,10 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { instance, setToken  } from '../auth/operations';
+import { instance } from '../auth/operations';
 import toast from 'react-hot-toast';
+
+const setToken = token => {
+  instance.defaults.headers.common.Authorization = `Bearer ${token}`;
+};
 
 export const fetchCart = createAsyncThunk(
   'cart/fetchCart',
@@ -29,7 +33,7 @@ export const updateCart = createAsyncThunk(
         productId,
         quantity,
       });
-      toast.success('Added to cart successfully');
+      toast.success('Cart updated successfully');
       return response.data;
     } catch (error) {
       toast.error(error.message);
@@ -40,7 +44,7 @@ export const updateCart = createAsyncThunk(
 
 export const checkoutCart = createAsyncThunk(
   'cart/checkoutCart',
-  async (_, thunkApi) => {
+  async ({ paymentMethod, shippingInfo }, thunkApi) => {
     try {
        const state = thunkApi.getState();
       const token = state.auth.token;
@@ -48,7 +52,11 @@ export const checkoutCart = createAsyncThunk(
       if (!token) return thunkApi.rejectWithValue('Token is not valid');
       setToken(token);
 
-      const response = await instance.post('/cart/checkout');
+      const response = await instance.post('/cart/checkout', {
+        paymentMethod,
+        shippingInfo,
+      });
+      
       toast.success('Order placed successfully');
       return response.data;
     } catch (error) {

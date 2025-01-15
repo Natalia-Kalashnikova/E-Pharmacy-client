@@ -11,7 +11,6 @@ import { selectCart } from '../../../redux/cart/selectors';
 import { fetchCart } from '../../../redux/cart/operations';
 
 const LogInMenu = () => {
-  const [isCartFetched, setCartFetched] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === '/home';
   const userInfo = useSelector(selectUserInfo);
@@ -19,18 +18,17 @@ const LogInMenu = () => {
   const dispatch = useDispatch();
   const cart = useSelector(selectCart);
   const navigate = useNavigate();
+  const [isDataFetched, setIsDataFetched] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
-      if (!token || isCartFetched) return;
-      if (!userInfo) {
-        await dispatch(getUserInfoAPI()).unwrap();
-      }
-      dispatch(fetchCart());
-      setCartFetched(true);
+      if (!token || isDataFetched) return;
+      await dispatch(getUserInfoAPI()).unwrap();
+      await dispatch(fetchCart()).unwrap();
+      setIsDataFetched(true);
     };
     fetchData();
-  }, [dispatch, token, userInfo, isCartFetched]);
+  }, [dispatch, token, isDataFetched]);
 
   const handleCartClick = () => {
     navigate('/cart');
@@ -38,6 +36,7 @@ const LogInMenu = () => {
   
   const handleLogout = () => {
     dispatch(logoutAPI());
+    setIsDataFetched(false);
   };
     
     return (

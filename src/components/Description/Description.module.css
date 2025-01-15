@@ -1,4 +1,4 @@
-.descriptionWrapper {
+/* .descriptionWrapper {
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 0%;
@@ -7,5 +7,41 @@
   @media screen and (min-width: 768px) {
     font-size: 16px;
     line-height: 24px;
+  }
+} */
+
+.descriptionWrapper p {
+  color: #6a6a6f;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.29;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+.descriptionWrapper ul li span {
+  color: #6a6a6f;
+  font-size: 14px;
+  line-height: 1.29;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+.descriptionWrapper ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 14px;
+  line-height: 1.29;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+    line-height: 1.5;
   }
 }

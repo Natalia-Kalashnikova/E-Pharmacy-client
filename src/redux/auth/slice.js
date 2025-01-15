@@ -11,6 +11,7 @@ const AUTH_INITIAL_STATE = {
   name: null,
   email: null,
   token: null,
+  userId: null,
   isLoggedIn: false,
   isRefreshing: false,
   userInfo: null,
@@ -39,16 +40,19 @@ const authSlice = createSlice({
         state.loading = false;
         state.isLoggedIn = true;
         state.token = action.payload.data.accessToken;
+        state.userId = action.payload.data.userId;
       })
       
       .addCase(loginAPI.fulfilled, (state, action) => {
         state.loading = false;
         state.isLoggedIn = true;
         state.token = action.payload.data.accessToken;
+        state.userId = action.payload.data.userId;
       })
       
       .addCase(refreshUserAPI.fulfilled, (state, action) => {
         state.token = action.payload.data.accessToken;
+        state.userId = action.payload.data.userId;
         state.loading = false;
         state.isLoggedIn = true;        
       })

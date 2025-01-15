@@ -3,19 +3,30 @@ import { useModal } from "../../context/modalContext.jsx";
 import LoginModal from "../LoginModal/LoginModal.jsx";
 import Icon from '../Icon/Icon.jsx';
 import css from './ProductOverview.module.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectIsLoggedIn } from '../../redux/auth/selectors';
+import { fetchCart, updateCart } from '../../redux/cart/operations';
 
 const ProductOverview = ({product}) => {
   const [quantity, setQuantity] = useState(1);
 
-  const { openModal } = useModal();
-  const loggedIn = false;
+  const isLoggedIn = useSelector(selectIsLoggedIn);
+  const dispatch = useDispatch();
+  const { openModal } = useModal();  
   
   const handleAddToCart = () => {
-    if (!loggedIn) {      
+    if (!isLoggedIn) {      
       return openModal(<LoginModal />);
     }
-    console.log(product);
+    fetchData();
   };
+  const fetchData = async () => {
+    await dispatch(
+      updateCart({ productId: product._id, quantity: quantity })
+    ).unwrap();
+    await dispatch(fetchCart()).unwrap();
+  };
+  
   const handleAdd = () => {
     setQuantity(prevQuantity => prevQuantity + 1);
   };

@@ -6,7 +6,7 @@ import { useModal } from '../../context/modalContext.jsx';
 import LoginModal from '../LoginModal/LoginModal.jsx';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectIsLoggedIn } from '../../redux/auth/selectors';
-import { updateCart } from '../../redux/cart/operations';
+import { fetchCart, updateCart } from '../../redux/cart/operations';
 
 const MedicineCard = ({ product }) => {
   const { openModal } = useModal();
@@ -20,7 +20,15 @@ const MedicineCard = ({ product }) => {
     if (!loggedIn) {
       return openModal(<LoginModal />);
     }
-    dispatch(updateCart({ productId: product._id, quantity: 1 }));
+
+     fetchData();
+  };
+  const fetchData = async () => {
+    if (!loggedIn) return;
+    await dispatch(
+      updateCart({ productId: product._id, quantity: 1 })
+    ).unwrap();
+    await dispatch(fetchCart()).unwrap();
   };
   
   const handleDetailsClick = () => {
