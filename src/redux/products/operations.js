@@ -6,16 +6,11 @@ export const fetchProducts = createAsyncThunk(
   'products/fetchProducts',
   async (filters = {}, thunkApi) => {
     try {
-      const {
-        name = '',
-        category = '',
-        page = 1,
-        perPage = 12,
-        limit = 12,
-      } = filters;
+      const { name = '', category = '', page = 1, perPage = 12 } = filters;
       const response = await instance.get('/products', {
-        params: { name, category, page, perPage, limit },
-      });
+        params: { name, category, page, perPage },
+      });      
+      
       return response.data;
     } catch (error) {
       toast.error(error.message);

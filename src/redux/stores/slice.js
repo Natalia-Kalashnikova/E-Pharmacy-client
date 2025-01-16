@@ -5,7 +5,7 @@ const INITIAL_STATE = {
   stores: [],
   nearestStores: [],
   totalPages: 1,
-  page: 1,
+  page: null,
   loading: false,
   error: null,
 };
@@ -33,8 +33,8 @@ const storesSlice = createSlice({
       .addCase(fetchStores.fulfilled, (state, action) => {
         state.loading = false;
         state.stores = action.payload.data.data;
-        state.totalPages = action.payload.totalPages;
-        state.page = action.payload.page;
+        state.totalPages = action.payload.data.totalPages;
+        state.page = action.payload.data.page;
       })
       .addCase(fetchNearestStores.fulfilled, (state, action) => {
         state.loading = false;
