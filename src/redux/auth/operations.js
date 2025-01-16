@@ -3,7 +3,7 @@ import axios from 'axios';
 import toast from 'react-hot-toast';
 
 export const instance = axios.create({
-  baseURL: 'https://e-pharmacy-backend-8qnu.onrender.com/',
+  baseURL: import.meta.env.VITE_BASE_URL,
   withCredentials: true,
 });
 
