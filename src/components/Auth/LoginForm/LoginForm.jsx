@@ -89,7 +89,8 @@ const LoginForm = ({isModal = false}) => {
               [css.inputSuccess]: !errors.password && getValues('password'),
             })}
           />
-          <button
+            <button
+            aria-label="Show password"
             className={css.showPasswordBtn}
             type="button"
             onClick={handleClickShowPassword}
@@ -115,7 +116,7 @@ const LoginForm = ({isModal = false}) => {
         </label>
       </div>
       <div className={css.btnWrapper}>
-        <button type="submit" className={css.btn}>
+        <button aria-label="login" type="submit" className={css.btn}>
           Log in
         </button>
         <button

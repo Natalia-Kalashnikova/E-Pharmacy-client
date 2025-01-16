@@ -197,7 +197,7 @@ const CartForm = () => {
           <p className={css.total}>Total:</p>
           <p className={css.totalPrice}>₴{cartTotal}</p>
         </div>
-        <button type="submit" form="cart-form" className={css.button}>
+        <button aria-label="Order" type="submit" form="cart-form" className={css.button}>
           Place order
         </button>
       </div>

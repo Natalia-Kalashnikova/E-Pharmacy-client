@@ -96,7 +96,7 @@ const {
               [css.inputError]: errors.password,
               [css.inputSuccess]: !errors.password && getValues('password'),
             })}/>
-                    <button className={css.showPasswordBtn} type="button" onClick={handleClickShowPassword}>
+                    <button aria-label="show password" className={css.showPasswordBtn} type="button" onClick={handleClickShowPassword}>
                         {showPassword ? (
                             <Icon className={css.icon} iconId="icon-eye-off" />
                         ) : (

@@ -49,6 +49,7 @@ const ProductOverview = ({product}) => {
         <div className={css.btnWrapper}>
           <div className={css.buttonAddRemoveWrapper}>
             <button
+              aria-label="Add"
               type="button"
               className={css.buttonAddRemove}
               onClick={handleAdd}

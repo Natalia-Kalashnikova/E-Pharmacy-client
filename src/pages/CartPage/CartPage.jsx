@@ -22,6 +22,7 @@ const CartPage = () => {
         <div className={css.emptyCart}>
           <p className={css.emptyCartText}>Your cart is empty</p>
           <button
+            aria-label="To store"
             type="button"
             className={css.btnEmptyCart}
             onClick={handleStoreClick}

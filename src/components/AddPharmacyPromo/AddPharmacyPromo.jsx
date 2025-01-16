@@ -25,7 +25,7 @@ const AddPharmacyPromo = () => {
               platform.
             </p>
           </div>
-          <button type="button" className={css.button} onClick={handleBtnClick}>
+          <button aria-label="Buy" type="button" className={css.button} onClick={handleBtnClick}>
             Buy medicine
           </button>
         </div>

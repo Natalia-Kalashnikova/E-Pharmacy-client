@@ -56,6 +56,7 @@ const MedicineCard = ({ product }) => {
         <p className={css.price}>₴{product.price}</p>
         <div className={css.btnWrapper}>
           <button
+            aria-label="Add"
             type="button"
             className={css.buttonAdd}
             onClick={handleAddToCart}

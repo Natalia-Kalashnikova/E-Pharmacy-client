@@ -27,7 +27,7 @@ const StoreCart = ({ store, isMedicineStorePage }) => {
       </div>
         <div className={isMedicineStorePage ? css.medicineInfoWrapper : css.infoWrapper}>
           {isMedicineStorePage && (
-            <button type="button" className={css.button} onClick={handleBtnClick}>
+            <button aria-label="Visit" type="button" className={css.button} onClick={handleBtnClick}>
               Visit Store
             </button>
           )}          

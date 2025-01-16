@@ -45,7 +45,8 @@ const MedicineFilters = () => {
       <h3 className={css.title}>Medicine</h3>
       <div className={css.wrapper}>
         <div className={css.label} ref={popoverRef}>
-          <button
+            <button
+            aria-label="Categories"
             type="button"
             className={css.buttonCategories}
             onClick={handleTogglePopover}

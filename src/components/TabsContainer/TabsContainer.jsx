@@ -20,7 +20,8 @@ const TabsContainer = ({ product }) => {
         >
           Description
         </button>
-        <button
+          <button
+            aria-label="Reviews"
           className={`${css.tabLink} ${
             activeTab === 'Reviews' ? css.active : ''
           }`}

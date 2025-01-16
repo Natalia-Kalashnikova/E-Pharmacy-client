@@ -12,7 +12,7 @@ const Modal = ({ children }) => {
   return (
     <div className={css.modalWrapper}>
       <div className={css.modalContainer}>
-        <button
+        <button          
           className={css.modalButtonClose}
           aria-label="close-modal-window-button"
           onClick={handleCloseModal}

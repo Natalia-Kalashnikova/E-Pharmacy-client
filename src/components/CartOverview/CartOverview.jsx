@@ -45,7 +45,7 @@ const CartOverview = ({ cart }) => {
             </div>
             <div className={css.btnWrapper}>
               <div className={css.buttonAddRemoveWrapper}>
-                <button
+                <button aria-label="Remove"
                   type="button"
                   className={css.buttonAddRemove}
                   onClick={() =>
@@ -56,6 +56,7 @@ const CartOverview = ({ cart }) => {
                 </button>
                 <p className={css.quantity}>{product.quantity}</p>
                 <button
+                  aria-label="Remove"
                   type="button"
                   className={css.buttonAddRemove}
                   onClick={() =>
@@ -66,6 +67,7 @@ const CartOverview = ({ cart }) => {
                 </button>
               </div>
               <button
+                aria-label="Delete"
                 type="button"
                 className={css.btnRemove}
                 onClick={() => handleDeleteProduct(product.product._id)}

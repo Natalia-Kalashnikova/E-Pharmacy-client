@@ -41,7 +41,7 @@ const MobileMenu = () => {
     </>
   );
   const renderLogoutButton = () => (
-    <button type="button" onClick={handleLogout} className={css.btnLogout}>
+    <button aria-label="Logout" type="button" onClick={handleLogout} className={css.btnLogout}>
       Logout
     </button>
   );
@@ -54,7 +54,7 @@ const MobileMenu = () => {
                 {!isAuthorizationPage && (
                 <div className={css.userMenuWrapper}>
             {isLoggedIn && <LogInMenu />}
-            <button type="button" className={css.button} onClick={toggleMenu}>
+            <button aria-label="Open" type="button" className={css.button} onClick={toggleMenu}>
               <Icon
                 iconId="icon-burger-menu"
                 className={clsx(css.iconMenu, {
@@ -67,7 +67,7 @@ const MobileMenu = () => {
 
                 {isOpen && (
                     <div className={css.mobileMenu}>
-                        <button className={css.closeBtn} onClick={toggleMenu}>
+                        <button aria-label="Close" className={css.closeBtn} onClick={toggleMenu}>
                             <Icon iconId="icon-x" className={css.iconClose} />
                         </button>
                         <span />

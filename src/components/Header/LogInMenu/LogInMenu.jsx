@@ -62,7 +62,8 @@ const LogInMenu = () => {
           {(userInfo && userInfo.name && userInfo.name[0]) || 'U'}
         </div>
       </div>
-      <button
+        <button
+        aria-label="logout"
         type="button"
         className={clsx(css.button, { [css.buttonWhiteColor]: isHomePage })}
         onClick={handleLogout}
