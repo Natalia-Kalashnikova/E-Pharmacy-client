@@ -5,15 +5,21 @@ import NavigationMenu from '../../NavigationMenu/NavigationMenu.jsx';
 import AuthMenu from '../../AuthMenu/AuthMenu.jsx';
 import MobileMenu from '../../MobileMenu/MobileMenu.jsx';
 import css from './NavigationBar.module.css';
+import { useScrollContext } from '../../../context/ScrollContext.jsx';
 
 
 const NavigationBar = () => {
     const location = useLocation();
+    const { headerRef } = useScrollContext();
+
     const isHomePage = location.pathname === '/home';
     const isAuthorizationPage = location.pathname === '/login' || location.pathname === '/register';
 
     return (
-        <header className={clsx(css.header, { [css.greenBackground]: isHomePage })}>
+         <header
+      ref={headerRef}
+      className={clsx(css.header, { [css.greenBackground]: isHomePage })}
+    >
             <div className={css.wrapper}>
                 <Logo />                
                 {!isAuthorizationPage && (

@@ -5,6 +5,7 @@ import clsx from 'clsx';
 import { toastStyle } from '../../utils/toastStyle.js';
 import Footer from '../Footer/Footer.jsx';
 import { useLocation } from 'react-router-dom';
+import { ScrollProvider } from '../../context/ScrollContext.jsx';
 
 const Layout = ({ children }) => {
   const location = useLocation();
@@ -13,17 +14,20 @@ const Layout = ({ children }) => {
     location.pathname === '/login' || location.pathname === '/register';
 
   return (
-    <div className={css.container}>
-      <NavigationBar />
-      <main
-        className={clsx(css.content, {
-          [css.authorizationPage]: isAuthorizationPage,
-        })}>
-        <Toaster position="top-right" toastOptions={toastStyle} />
-        {children}
-      </main>
-      {!isAuthorizationPage && <Footer />}
-    </div>
+     <ScrollProvider>
+      <div className={css.container}>
+        <NavigationBar />
+        <main
+          className={clsx(css.content, {
+            [css.authorizationPage]: isAuthorizationPage,
+          })}
+        >
+          <Toaster position="top-right" toastOptions={toastStyle} />
+          {children}
+        </main>
+        {!isAuthorizationPage && <Footer />}
+      </div>
+    </ScrollProvider>
   );
 };
 

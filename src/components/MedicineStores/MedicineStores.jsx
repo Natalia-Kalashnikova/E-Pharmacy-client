@@ -14,13 +14,20 @@ import {
 } from '../../redux/stores/operations';
 import { useEffect } from "react";
 import PaginationComponent from '../PaginationComponent/PaginationComponent.jsx';
+import { useScrollContext } from '../../context/ScrollContext';
 
 const MedicineStores = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const dispatch = useDispatch();
-  const currentPage = useSelector(selectPage);
+  const dispatch = useDispatch();  
 
+  const { headerRef } = useScrollContext();
+  const scrollToHeader = () => {
+    if (headerRef.current) {
+      headerRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  const currentPage = useSelector(selectPage);
   const nearestStores = useSelector(selectNearestStores);
   const allStores = useSelector(selectStores);
 
@@ -29,6 +36,7 @@ const MedicineStores = () => {
   useEffect(() => {
     if (isMedicineStorePage) {
       dispatch(fetchStores({ perPage: 9, page: currentPage }));
+      scrollToHeader();
     } else {
       dispatch(fetchNearestStores());
     }

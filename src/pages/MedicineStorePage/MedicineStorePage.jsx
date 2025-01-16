@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux';
 
 const MedicineStorePage = () => {
   const isLoading = useSelector(selectIsLoading);
+
   return (
     <div className={css.wrapper}>
       {isLoading && <Loader />}
