@@ -20,8 +20,7 @@ export const registerAPI = createAsyncThunk(
   async (formData, thunkApi) => {
     try {
       const { data } = await instance.post('/user/register', formData);
-      setToken(data.data.accessToken);      
-
+      setToken(data.data.accessToken);
       return data;
     } catch (e) {
       toast.error(e.message);

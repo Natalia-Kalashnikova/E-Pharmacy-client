@@ -20,12 +20,16 @@ const LogInMenu = () => {
   const navigate = useNavigate();
   const [isDataFetched, setIsDataFetched] = useState(false);
 
-  useEffect(() => {
+ useEffect(() => {
     const fetchData = async () => {
       if (!token || isDataFetched) return;
-      await dispatch(getUserInfoAPI()).unwrap();
-      await dispatch(fetchCart()).unwrap();
-      setIsDataFetched(true);
+      try {
+        await dispatch(getUserInfoAPI()).unwrap();
+        await dispatch(fetchCart()).unwrap();
+        setIsDataFetched(true);
+      } catch (error) {
+        console.error("Error fetching user/cart data:", error);
+      }
     };
     fetchData();
   }, [dispatch, token, isDataFetched]);
@@ -34,9 +38,13 @@ const LogInMenu = () => {
     navigate('/cart');
   };
   
-  const handleLogout = () => {
-    dispatch(logoutAPI());
-    setIsDataFetched(false);
+  const handleLogout = async () => {
+    try {
+      await dispatch(logoutAPI()).unwrap(); 
+      setIsDataFetched(false); 
+    } catch (error) {
+      console.error("Logout failed:", error);
+    }
   };
     
     return (
