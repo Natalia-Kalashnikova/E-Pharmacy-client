@@ -1,5 +1,5 @@
-import { useNavigate } from "react-router-dom";
-import { useMediaQuery } from "@mui/material";
+import { useNavigate } from 'react-router-dom';
+import { useMediaQuery } from '@mui/material';
 import Icon from '../Icon/Icon.jsx';
 import mobileBanner1x from '../../images/baner-mobile@1x.png';
 import mobileBanner2x from '../../images/baner-mobile@2x.png';
@@ -25,7 +25,11 @@ const AddPharmacyPromo = () => {
               platform.
             </p>
           </div>
-          <button aria-label="Buy" type="button" className={css.button} onClick={handleBtnClick}>
+          <button
+            aria-label="Buy"
+            type="button"
+            className={css.button}
+            onClick={handleBtnClick}>
             Buy medicine
           </button>
         </div>
@@ -70,4 +74,5 @@ const AddPharmacyPromo = () => {
     </div>
   );
 };
+
 export default AddPharmacyPromo;

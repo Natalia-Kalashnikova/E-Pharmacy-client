@@ -13,13 +13,13 @@ const Footer = () => {
             Get the medicine to help you feel better, get back to your active life, and enjoy every moment.
           </p>
           <div className={css.socialWrapper}>
-            <Link to="https://www.facebook.com/goITclub/" target="_blank" rel="noopener noreferrer" className={css.linkSocial}>
+            <Link to="https://www.facebook.com/goITclub/" target="_blank" rel="noopener noreferrer" className={css.linkSocial} aria-label="Visit our Facebook page">
               <Icon iconId="icon-facebook" className={css.iconSocial} />
             </Link>
-            <Link to="https://www.instagram.com/goitclub/" target="_blank" rel="noopener noreferrer" className={css.linkSocial}>
+            <Link to="https://www.instagram.com/goitclub/" target="_blank" rel="noopener noreferrer" className={css.linkSocial} aria-label="Visit our Instagram page">
               <Icon iconId="icon-instagram" className={css.iconSocial} />
             </Link>
-            <Link to="https://www.youtube.com/c/GoIT" target="_blank" rel="noopener noreferrer" className={css.linkSocial}>
+            <Link to="https://www.youtube.com/c/GoIT" target="_blank" rel="noopener noreferrer" className={css.linkSocial} aria-label="Visit our YouTube channel">
               <Icon iconId="icon-youtube" className={css.iconSocial} />
             </Link>            
           </div>
