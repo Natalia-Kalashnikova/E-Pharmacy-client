@@ -1,32 +1,31 @@
-import { useLocation, useNavigate } from "react-router-dom";
-import css from './MedicineStores.module.css';
-import StoreCart from '../StoreCart/StoreCart.jsx';
-import clsx from "clsx";
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import { useCallback, useEffect } from 'react';
+import clsx from 'clsx';
+import StoreCart from '../StoreCart/StoreCart.jsx';
 import {
   selectNearestStores,
   selectStores,
   selectPage,
 } from '../../redux/stores/selectors.js';
-import {
-  fetchNearestStores,
-  fetchStores,
-} from '../../redux/stores/operations';
-import { useEffect } from "react";
+import { fetchNearestStores, fetchStores } from '../../redux/stores/operations';
 import PaginationComponent from '../PaginationComponent/PaginationComponent.jsx';
 import { useScrollContext } from '../../context/ScrollContext';
+import css from './MedicineStores.module.css';
 
 const MedicineStores = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const dispatch = useDispatch();  
+  const dispatch = useDispatch();
 
   const { headerRef } = useScrollContext();
-  const scrollToHeader = () => {
-    if (headerRef.current) {
-      headerRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+
+const scrollToHeader = useCallback(() => {
+  if (headerRef.current) {
+    headerRef.current.scrollIntoView({ behavior: 'smooth' });
+  }
+}, [headerRef]);
+  
   const currentPage = useSelector(selectPage);
   const nearestStores = useSelector(selectNearestStores);
   const allStores = useSelector(selectStores);
@@ -40,14 +39,14 @@ const MedicineStores = () => {
     } else {
       dispatch(fetchNearestStores());
     }
-  }, [dispatch, isMedicineStorePage, currentPage]);
+  }, [dispatch, isMedicineStorePage, currentPage, scrollToHeader]);
 
-    const handleShopClick = () => {
+  const handleShopClick = () => {
     navigate('/medicine');
   };
 
   const getRandomStores = (stores, count) => {
-     if (!Array.isArray(stores)) {
+    if (!Array.isArray(stores)) {
       return [];
     }
     const shuffled = [...stores].sort(() => 0.5 - Math.random());
@@ -73,16 +72,14 @@ const MedicineStores = () => {
       <ul
         className={clsx(css.storesList, {
           [css.medicineStoreList]: isMedicineStorePage,
-        })}
-      >
+        })}>
         {storesToShow.map((store, index) => (
           <li
             key={store._id || index}
             className={clsx(css.storeItem, {
               [css.medicineStoreItem]: isMedicineStorePage,
             })}
-            onClick={isMedicineStorePage ? undefined : handleShopClick}
-          >
+            onClick={isMedicineStorePage ? undefined : handleShopClick}>
             <StoreCart
               store={store}
               isMedicineStorePage={isMedicineStorePage}
@@ -93,6 +90,6 @@ const MedicineStores = () => {
       {isMedicineStorePage && <PaginationComponent />}
     </div>
   );
-}
+};
 
 export default MedicineStores;

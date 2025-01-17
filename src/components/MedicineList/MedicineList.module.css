@@ -5,11 +5,11 @@
   max-width: 335px;
 
   @media screen and (min-width: 768px) {
-    max-width: 704px;
-    width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 32px 13px;
+    max-width: 704px;
+    width: 100%;
   }
 
   @media screen and (min-width: 1440px) {
@@ -35,6 +35,7 @@
 
 .noProducts {
   text-align: left;
+
   @media screen and (min-width: 768px) {
     font-size: 20px;
   }

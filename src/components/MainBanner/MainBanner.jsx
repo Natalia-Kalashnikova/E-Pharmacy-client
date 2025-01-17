@@ -1,7 +1,7 @@
 import css from './MainBanner.module.css';
 
 const MainBanner = () => {
-    return (
+  return (
     <div className={css.wrapper}>
       <div className={css.textWrapper}>
         <h1 className={css.title}>Your medication delivered</h1>
@@ -14,6 +14,6 @@ const MainBanner = () => {
       </div>
     </div>
   );
-}
+};
 
 export default MainBanner;

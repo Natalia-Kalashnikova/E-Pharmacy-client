@@ -1,12 +1,12 @@
-import { useMediaQuery } from "@mui/material";
-import ReactEllipsisText from "react-ellipsis-text";
-import { useNavigate } from "react-router-dom";
-import css from './MedicineCard.module.css';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { useMediaQuery } from '@mui/material';
+import ReactEllipsisText from 'react-ellipsis-text';
 import { useModal } from '../../context/modalContext.jsx';
 import LoginModal from '../LoginModal/LoginModal.jsx';
-import { useDispatch, useSelector } from 'react-redux';
 import { selectIsLoggedIn } from '../../redux/auth/selectors';
 import { fetchCart, updateCart } from '../../redux/cart/operations';
+import css from './MedicineCard.module.css';
 
 const MedicineCard = ({ product }) => {
   const { openModal } = useModal();
@@ -15,13 +15,13 @@ const MedicineCard = ({ product }) => {
   const dispatch = useDispatch();
 
   const isTablet = useMediaQuery('(min-width: 768px) and (max-width: 1439px)');
-  
+
   const handleAddToCart = () => {
     if (!loggedIn) {
       return openModal(<LoginModal />);
     }
 
-     fetchData();
+    fetchData();
   };
   const fetchData = async () => {
     if (!loggedIn) return;
@@ -30,7 +30,7 @@ const MedicineCard = ({ product }) => {
     ).unwrap();
     await dispatch(fetchCart()).unwrap();
   };
-  
+
   const handleDetailsClick = () => {
     navigate(`/product/${product._id}`);
   };
@@ -59,21 +59,19 @@ const MedicineCard = ({ product }) => {
             aria-label="Add"
             type="button"
             className={css.buttonAdd}
-            onClick={handleAddToCart}
-          >
+            onClick={handleAddToCart}>
             Add to cart
           </button>
           <button
             type="button"
             className={css.buttonDetails}
-            onClick={handleDetailsClick}
-          >
+            onClick={handleDetailsClick}>
             Details
           </button>
         </div>
       </div>
     </>
   );
-}
+};
 
 export default MedicineCard;

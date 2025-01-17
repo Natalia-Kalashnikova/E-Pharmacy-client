@@ -1,10 +1,10 @@
 .wrapper {
-  box-sizing: border-box;
-  max-width: 343px;
   display: flex;
   flex-direction: column;
   gap: 25px;
+  max-width: 343px;
   padding: 40px 32px;
+  box-sizing: border-box;
 
   @media screen and (min-width: 768px) {
     max-width: 463px;
@@ -28,11 +28,11 @@
 }
 
 .paragraph {
-  color: rgb(106, 106, 111);
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 0%;
   text-align: center;
+  color: rgb(106, 106, 111);
 
   @media screen and (min-width: 768px) {
     width: 220px;

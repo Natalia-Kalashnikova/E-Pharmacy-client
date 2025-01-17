@@ -1,5 +1,7 @@
 .header {
   width: 100vw;
+  padding: 28px 0;
+
   background-color: var(--primary-light-gray-color);
   border: none;
 }
@@ -13,7 +15,6 @@
     justify-content: space-between;
     width: 1184px;
     height: 46px;
-    padding: 28px 0;
     margin: 0 auto;
   }
 }

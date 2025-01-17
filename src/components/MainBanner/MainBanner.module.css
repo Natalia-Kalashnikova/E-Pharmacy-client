@@ -1,11 +1,13 @@
 .wrapper {
   position: relative;
-  min-height: calc(100vh - 82px);
-  box-sizing: border-box;
-  width: 100vw;
+
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: calc(100vh - 82px);
+  width: 100vw;
+  box-sizing: border-box;
+
   background-color: var(--primary-green-color);
 
   @media screen and (min-width: 768px) {
@@ -17,11 +19,12 @@
 }
 
 .background {
-  width: 331px;
-  height: 312px;
   position: absolute;
   top: calc(50% - 18px);
   left: 50%;
+
+  width: 331px;
+  height: 312px;
   transform: translate(-50%, -50%);
   background-image: image-set(
     url(../../images/tablets-mobile@1x.webp) 1x,
@@ -37,8 +40,10 @@
   @media screen and (min-width: 768px) {
     top: calc(50% - 70px);
     left: calc(50% + 15px);
+
     width: 749px;
     height: 508px;
+
     background-image: image-set(
       url(../../images/tablets@1x.webp) 1x,
       url(../../images/tablets@1x.png) 1x,
@@ -50,11 +55,11 @@
 }
 
 .textWrapper {
-  width: 335px;
-  height: 312px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 335px;
+  height: 312px;
   z-index: 1;
 
   @media screen and (min-width: 768px) {
@@ -65,17 +70,18 @@
 }
 
 .title {
-  color: var(--primary-white-color);
   font-size: 50px;
   font-weight: 600;
   line-height: 50px;
   letter-spacing: 0%;
   text-align: left;
+  color: var(--primary-white-color);
 
   @media screen and (min-width: 768px) {
+    margin-top: 70px;
+
     font-size: 74px;
     line-height: 74px;
-    margin-top: 70px;
   }
 }
 
@@ -86,14 +92,16 @@
 
 .paragraph {
   width: 156px;
-  color: var(--primary-white-color);
+
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0%;
   text-align: left;
+  color: var(--primary-white-color);
 
   @media screen and (min-width: 768px) {
     width: 207px;
+
     font-size: 16px;
     line-height: 20px;
   }

@@ -1,12 +1,12 @@
-import MedicineCard from '../../components/MedicineCard/MedicineCard.jsx';
-import css from './MedicineList.module.css';
 import { useSelector } from 'react-redux';
+import MedicineCard from '../../components/MedicineCard/MedicineCard.jsx';
 import { selectProducts } from '../../redux/products/selectors.js';
+import css from './MedicineList.module.css';
 
 const MedicineList = () => {
   const products = useSelector(selectProducts);
-     return (
-     <>
+  return (
+    <>
       <ul className={css.productList}>
         {products.length === 0 && (
           <p className={css.noProducts}>No products found:(</p>
