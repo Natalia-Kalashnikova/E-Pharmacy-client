@@ -42,7 +42,7 @@ const MedicineFilters = () => {
 
   return (
     <div className={css.container}>
-      <h3 className={css.title}>Medicine</h3>
+      <h2 className={css.title}>Medicine</h2>
       <div className={css.wrapper}>
         <div className={css.label} ref={popoverRef}>
           <button
