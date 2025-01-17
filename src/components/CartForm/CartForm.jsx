@@ -1,15 +1,14 @@
 import { useForm } from 'react-hook-form';
+import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import CartFormSchema from '../../validation/cartFormSchema.js';
-import css from './CartForm.module.css';
 import { yupResolver } from '@hookform/resolvers/yup';
 import clsx from 'clsx';
-import { useState } from 'react';
-import { useSelector } from 'react-redux';
 import { selectCart } from '../../redux/cart/selectors';
-import { useNavigate } from 'react-router-dom';
 import { checkoutCart } from '../../redux/cart/operations';
-import { useDispatch } from 'react-redux';
 import { useScrollContext } from '../../context/ScrollContext.jsx';
+import css from './CartForm.module.css';
 
 const CartForm = () => {
   const [paymentType, setPaymentType] = useState('cash');
@@ -19,15 +18,17 @@ const CartForm = () => {
       .reduce((acc, item) => acc + item.product.price * item.quantity, 0)
       .toFixed(2)
   );
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { headerRef } = useScrollContext();
+
   const scrollToHeader = () => {
     if (headerRef.current) {
       headerRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
-    
+
   const {
     register,
     handleSubmit,
@@ -44,9 +45,9 @@ const CartForm = () => {
       paymentMethod: 'cash',
     },
   });
-    
+
   const onSubmit = data => {
-     dispatch(
+    dispatch(
       checkoutCart({
         paymentMethod: paymentType,
         shippingInfo: {
@@ -61,13 +62,13 @@ const CartForm = () => {
     reset();
     navigate('/home');
     scrollToHeader();
-    };
-    
+  };
+
   const handlePaymentRadioChange = e => {
     const { value } = e.target;
     setPaymentType(value);
-    };
-    
+  };
+
   return (
     <div className={css.mainWrapper}>
       <div className={css.infoWrapper}>
@@ -80,8 +81,7 @@ const CartForm = () => {
       <form
         id="cart-form"
         onSubmit={handleSubmit(onSubmit)}
-        className={css.form}
-      >
+        className={css.form}>
         <div className={css.inputWrapper}>
           <label className={css.labelWrapper}>
             <p className={css.labelText}>Name</p>
@@ -151,8 +151,7 @@ const CartForm = () => {
           <label
             className={clsx(css.radioLabel, {
               [css.radioLabelChecked]: paymentType === 'cash',
-            })}
-          >
+            })}>
             <input
               type="radio"
               id="cash"
@@ -168,8 +167,7 @@ const CartForm = () => {
           <label
             className={clsx(css.radioLabel, {
               [css.radioLabelChecked]: paymentType === 'creditCard',
-            })}
-          >
+            })}>
             <input
               type="radio"
               id="creditCard"
@@ -197,7 +195,11 @@ const CartForm = () => {
           <p className={css.total}>Total:</p>
           <p className={css.totalPrice}>₴{cartTotal}</p>
         </div>
-        <button aria-label="Order" type="submit" form="cart-form" className={css.button}>
+        <button
+          aria-label="Order"
+          type="submit"
+          form="cart-form"
+          className={css.button}>
           Place order
         </button>
       </div>

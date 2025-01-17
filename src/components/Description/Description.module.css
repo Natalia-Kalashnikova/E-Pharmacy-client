@@ -1,20 +1,9 @@
-/* .descriptionWrapper {
-  font-size: 14px;
-  line-height: 18px;
-  letter-spacing: 0%;
-  text-align: left;
-
-  @media screen and (min-width: 768px) {
-    font-size: 16px;
-    line-height: 24px;
-  }
-} */
-
 .descriptionWrapper p {
-  color: #6a6a6f;
   margin-bottom: 20px;
+
   font-size: 14px;
   line-height: 1.29;
+  color: #6a6a6f;
 
   @media screen and (min-width: 768px) {
     font-size: 16px;
@@ -23,9 +12,9 @@
 }
 
 .descriptionWrapper ul li span {
-  color: #6a6a6f;
   font-size: 14px;
   line-height: 1.29;
+  color: #6a6a6f;
 
   @media screen and (min-width: 768px) {
     font-size: 16px;
@@ -37,6 +26,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+
   font-size: 14px;
   line-height: 1.29;
 

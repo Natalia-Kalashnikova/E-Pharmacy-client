@@ -15,17 +15,20 @@
 }
 
 .userCart {
+  position: relative;
+
   width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: var(--primary-white-color);
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  height: 40px;
+
+  background-color: var(--primary-white-color);
+  border-radius: 50%;
   border: 1px solid rgb(241, 241, 241);
   box-shadow: 0px -1px 7px 0px rgba(71, 71, 71, 0.05);
-  position: relative;
+
   cursor: pointer;
 
   @media screen and (min-width: 768px) {
@@ -40,42 +43,48 @@
 }
 
 .cartCount {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: absolute;
   top: -2px;
   right: -2px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 16px;
   height: 16px;
-  border-radius: 50%;
-  background-color: rgb(231, 241, 237);
-  color: rgb(89, 177, 122);
+
   font-size: 12px;
   font-weight: 700;
   line-height: 15px;
   letter-spacing: 0%;
   text-align: center;
+  color: rgb(89, 177, 122);
+
+  background-color: rgb(231, 241, 237);
+  border-radius: 50%;
 }
 
 .userAvatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(89, 177, 122, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgb(89, 177, 122);
+  width: 40px;
+  height: 40px;
+
   font-size: 14px;
   font-weight: 600;
   line-height: 140%;
   letter-spacing: 0%;
   text-align: left;
+  color: rgb(89, 177, 122);
+
+  background: rgba(89, 177, 122, 0.1);
+  border-radius: 50%;
 
   @media screen and (min-width: 768px) {
     width: 44px;
     height: 44px;
+
     font-size: 18px;
   }
 }
@@ -86,17 +95,20 @@
   @media screen and (min-width: 1440px) {
     display: block;
     padding: 16px 32px;
-    background-color: transparent;
     box-sizing: border-box;
-    border: 1px solid rgba(89, 177, 122, 0.5);
-    border-radius: 60px;
-    color: var(--primary-green-color);
+
     font-family: Inter;
     font-size: 14px;
     font-weight: 400;
     line-height: 100%;
     letter-spacing: 0%;
     text-align: left;
+    color: var(--primary-green-color);
+
+    background-color: transparent;
+    border: 1px solid rgba(89, 177, 122, 0.5);
+    border-radius: 60px;
+
     transition: all var(--transition-duration) var(--transition-timing-function);
   }
 }

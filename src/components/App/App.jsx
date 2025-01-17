@@ -1,21 +1,31 @@
 import { lazy, Suspense, useEffect } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import Loader from '../Loader/Loader.jsx';
 import Layout from '../Layout/Layout.jsx';
 import RestrictedRoute from '../Auth/RestrictedRoute.jsx';
 import PrivateRoute from '../Auth/PrivateRoute.jsx';
-import { useDispatch, useSelector } from 'react-redux';
 import { selectIsRefreshing } from '../../redux/auth/selectors.js';
 import { refreshUserAPI } from '../../redux/auth/operations.js';
 
-const RegisterPage = lazy(() => import('../../pages/RegisterPage/RegisterPage.jsx'));
+const RegisterPage = lazy(() =>
+  import('../../pages/RegisterPage/RegisterPage.jsx')
+);
 const LoginPage = lazy(() => import('../../pages/LoginPage/LoginPage.jsx'));
-const NotFoundPage = lazy(() => import('../../pages/NotFoundPage/NotFoundPage.jsx'));
+const NotFoundPage = lazy(() =>
+  import('../../pages/NotFoundPage/NotFoundPage.jsx')
+);
 const CartPage = lazy(() => import('../../pages/CartPage/CartPage.jsx'));
-const ProductPage = lazy(() => import('../../pages/ProductPage/ProductPage.jsx'));
-const MedicineStorePage = lazy(() => import('../../pages/MedicineStorePage/MedicineStorePage.jsx'));
+const ProductPage = lazy(() =>
+  import('../../pages/ProductPage/ProductPage.jsx')
+);
+const MedicineStorePage = lazy(() =>
+  import('../../pages/MedicineStorePage/MedicineStorePage.jsx')
+);
 const HomePage = lazy(() => import('../../pages/HomePage/HomePage.jsx'));
-const MedicinePage = lazy(() => import('../../pages/MedicinePage/MedicinePage.jsx'));
+const MedicinePage = lazy(() =>
+  import('../../pages/MedicinePage/MedicinePage.jsx')
+);
 
 function App() {
   const dispatch = useDispatch();
@@ -23,13 +33,13 @@ function App() {
   const isRefreshing = useSelector(selectIsRefreshing);
 
   useEffect(() => {
-   if (!isRefreshing) {
+    if (!isRefreshing) {
       dispatch(refreshUserAPI());
     }
   }, [dispatch, isRefreshing]);
 
   return (
-     !isRefreshing && (
+    !isRefreshing && (
       <Layout>
         <Suspense fallback={<Loader />}>
           <Routes>
@@ -71,5 +81,3 @@ function App() {
 }
 
 export default App;
-
-

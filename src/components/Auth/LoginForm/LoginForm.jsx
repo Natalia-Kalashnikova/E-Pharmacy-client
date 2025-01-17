@@ -1,26 +1,25 @@
-import { useState } from "react";
-import loginSchema from '../../../validation/loginSchema.js';
-import { yupResolver } from "@hookform/resolvers/yup";
-import { useForm } from "react-hook-form";
-import css from './LoginForm.module.css';
-import clsx from "clsx";
-import Icon from '../../Icon/Icon.jsx';
-import { useModal } from '../../../context/modalContext.jsx';
-import RegisterModal from "../../RegisterModal/RegisterModal.jsx";
-import { useNavigate } from "react-router-dom";
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import { yupResolver } from '@hookform/resolvers/yup';
+import clsx from 'clsx';
+import loginSchema from '../../../validation/loginSchema.js';
+import { useModal } from '../../../context/modalContext.jsx';
+import RegisterModal from '../../RegisterModal/RegisterModal.jsx';
 import { loginAPI } from '../../../redux/auth/operations';
+import Icon from '../../Icon/Icon.jsx';
+import css from './LoginForm.module.css';
 
-
-const LoginForm = ({isModal = false}) => {
-    const [showPassword, setShowPassword] = useState(false);
+const LoginForm = ({ isModal = false }) => {
+  const [showPassword, setShowPassword] = useState(false);
   const [isPasswordTouched, setIsPasswordTouched] = useState(false);
-  
-    const { openModal, closeModal } = useModal();
-  const navigate = useNavigate();
-   const dispatch = useDispatch();
 
-    const {
+  const { openModal, closeModal } = useModal();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const {
     register,
     handleSubmit,
     reset,
@@ -34,36 +33,38 @@ const LoginForm = ({isModal = false}) => {
       password: '',
     },
   });
-    
-    const onSubmit = (data, e) => {
+
+  const onSubmit = (data, e) => {
     dispatch(loginAPI(data));
     if (isModal) closeModal(e);
 
     reset();
   };
-  
-    const handleRegisterBtn = () => {
+
+  const handleRegisterBtn = () => {
     if (isModal) {
       openModal(<RegisterModal />);
     } else {
       navigate('/register');
     }
   };
-    
-    const handleClickShowPassword = () => {
+
+  const handleClickShowPassword = () => {
     setShowPassword(!showPassword);
-    };
-    
-    const handlePasswordFocus = () => {
+  };
+
+  const handlePasswordFocus = () => {
     setIsPasswordTouched(true);
-    };
-    
-    const handlePasswordBlur = () => {
+  };
+
+  const handlePasswordBlur = () => {
     setIsPasswordTouched(false);
-    };
-    
-    return (
-        <form onSubmit={handleSubmit(onSubmit)} className={clsx(isModal ? css.formModal : css.form)}>
+  };
+
+  return (
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className={clsx(isModal ? css.formModal : css.form)}>
       <div className={css.inputWrapper}>
         <label className={css.labelWrapper}>
           <input
@@ -89,12 +90,11 @@ const LoginForm = ({isModal = false}) => {
               [css.inputSuccess]: !errors.password && getValues('password'),
             })}
           />
-            <button
+          <button
             aria-label="Show password"
             className={css.showPasswordBtn}
             type="button"
-            onClick={handleClickShowPassword}
-          >
+            onClick={handleClickShowPassword}>
             {showPassword ? (
               <Icon className={css.icon} iconId="icon-eye-off" />
             ) : (
@@ -122,14 +122,12 @@ const LoginForm = ({isModal = false}) => {
         <button
           className={css.btnLogin}
           type="button"
-          onClick={handleRegisterBtn}
-        >
+          onClick={handleRegisterBtn}>
           Don't have an account?
         </button>
       </div>
     </form>
   );
-        
-}
+};
 
 export default LoginForm;

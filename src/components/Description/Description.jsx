@@ -1,24 +1,15 @@
-// import css from './Description.module.css';
-
-// const Description = ({ product }) => {
-//     return (
-//     <div className={css.descriptionWrapper}>
-//       <p className={css.text}>{product.description}</p>
-//     </div>
-//   );
-// }
-
-// export default Description;
-
 import DOMPurify from 'dompurify';
 import css from './Description.module.css';
 
 const Description = ({ product }) => {
-  const sanitizedDescription = product?.description ? DOMPurify.sanitize(product.description) : '';
-    return (
-    <div className={css.descriptionWrapper} dangerouslySetInnerHTML={{ __html: sanitizedDescription }}>        
-    </div>
+  const sanitizedDescription = product?.description
+    ? DOMPurify.sanitize(product.description)
+    : '';
+  return (
+    <div
+      className={css.descriptionWrapper}
+      dangerouslySetInnerHTML={{ __html: sanitizedDescription }}></div>
   );
-}
+};
 
 export default Description;

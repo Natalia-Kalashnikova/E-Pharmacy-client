@@ -1,14 +1,13 @@
 import { useLocation, useNavigate } from 'react-router-dom';
-import clsx from 'clsx';
-import Icon from '../../Icon/Icon.jsx';
-import css from './LogInMenu.module.css';
-import { logoutAPI } from '../../../redux/auth/operations.js';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectToken, selectUserInfo } from '../../../redux/auth/selectors';
 import { useEffect, useState } from 'react';
-import { getUserInfoAPI } from '../../../redux/auth/operations';
+import clsx from 'clsx';
+import { logoutAPI, getUserInfoAPI } from '../../../redux/auth/operations.js';
+import { selectToken, selectUserInfo } from '../../../redux/auth/selectors';
 import { selectCart } from '../../../redux/cart/selectors';
 import { fetchCart } from '../../../redux/cart/operations';
+import Icon from '../../Icon/Icon.jsx';
+import css from './LogInMenu.module.css';
 
 const LogInMenu = () => {
   const location = useLocation();
@@ -20,7 +19,7 @@ const LogInMenu = () => {
   const navigate = useNavigate();
   const [isDataFetched, setIsDataFetched] = useState(false);
 
- useEffect(() => {
+  useEffect(() => {
     const fetchData = async () => {
       if (!token || isDataFetched) return;
       try {
@@ -28,7 +27,7 @@ const LogInMenu = () => {
         await dispatch(fetchCart()).unwrap();
         setIsDataFetched(true);
       } catch (error) {
-        console.error("Error fetching user/cart data:", error);
+        console.error('Error fetching user/cart data:', error);
       }
     };
     fetchData();
@@ -37,17 +36,17 @@ const LogInMenu = () => {
   const handleCartClick = () => {
     navigate('/cart');
   };
-  
+
   const handleLogout = async () => {
     try {
-      await dispatch(logoutAPI()).unwrap(); 
-      setIsDataFetched(false); 
+      await dispatch(logoutAPI()).unwrap();
+      setIsDataFetched(false);
     } catch (error) {
-      console.error("Logout failed:", error);
+      console.error('Logout failed:', error);
     }
   };
-    
-    return (
+
+  return (
     <div className={css.mainWrapper}>
       <div className={css.wrapper}>
         <div className={css.userCart} onClick={handleCartClick}>
@@ -57,22 +56,19 @@ const LogInMenu = () => {
         <div
           className={clsx(css.userAvatar, {
             [css.avatarWhiteColor]: isHomePage,
-          })}
-        >
+          })}>
           {(userInfo && userInfo.name && userInfo.name[0]) || 'U'}
         </div>
       </div>
-        <button
+      <button
         aria-label="logout"
         type="button"
         className={clsx(css.button, { [css.buttonWhiteColor]: isHomePage })}
-        onClick={handleLogout}
-      >
+        onClick={handleLogout}>
         Log out
       </button>
     </div>
   );
-        
-}
+};
 
 export default LogInMenu;

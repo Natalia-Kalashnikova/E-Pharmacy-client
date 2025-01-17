@@ -10,9 +10,11 @@ import css from './AddPharmacyPromo.module.css';
 const AddPharmacyPromo = () => {
   const navigate = useNavigate();
   const isMobile = useMediaQuery('(max-width:767px)');
+  
   const handleBtnClick = () => {
     navigate('/medicine-store');
   };
+
   return (
     <div className={css.mainWrapper}>
       <div className={css.wrapper}>

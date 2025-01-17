@@ -1,16 +1,16 @@
 import { NavLink, useLocation } from 'react-router-dom';
-import css from './AuthMenu.module.css';
-import LogInMenu from '../Header/LogInMenu/LogInMenu.jsx';
-import clsx from 'clsx';
 import { useSelector } from 'react-redux';
+import clsx from 'clsx';
+import LogInMenu from '../Header/LogInMenu/LogInMenu.jsx';
 import { selectIsLoggedIn } from '../../redux/auth/selectors';
+import css from './AuthMenu.module.css';
 
 const AuthMenu = () => {
   const location = useLocation();
   const isHomePage = location.pathname === '/home';
 
   const isLoggedIn = useSelector(selectIsLoggedIn);
-  
+
   return (
     <div className={css.wrapper}>
       {isLoggedIn ? (
@@ -19,14 +19,14 @@ const AuthMenu = () => {
         <div className={css.btnWrapper}>
           <NavLink
             to="/register"
-            className={clsx(css.btnRegister, { [css.greenColor]: !isHomePage })}
-          >
+            className={clsx(css.btnRegister, {
+              [css.greenColor]: !isHomePage,
+            })}>
             Register
           </NavLink>
           <NavLink
             to="/login"
-            className={clsx(css.btnLogin, { [css.greenColor]: !isHomePage })}
-          >
+            className={clsx(css.btnLogin, { [css.greenColor]: !isHomePage })}>
             Log in
           </NavLink>
         </div>
@@ -36,5 +36,3 @@ const AuthMenu = () => {
 };
 
 export default AuthMenu;
-
-
