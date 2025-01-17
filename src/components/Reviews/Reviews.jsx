@@ -5,7 +5,7 @@ import css from './Reviews.module.css';
 const Reviews = ({ product }) => {
   const isMobile = useMediaQuery('(max-width:767px)');
 
-    return (
+  return (
     <ul className={css.wrapperList}>
       {product.reviews.map(review => (
         <li key={review.id} className={css.reviewItem}>
@@ -31,6 +31,6 @@ const Reviews = ({ product }) => {
       ))}
     </ul>
   );
-}
+};
 
 export default Reviews;

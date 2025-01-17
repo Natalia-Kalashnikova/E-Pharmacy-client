@@ -7,16 +7,16 @@ import {
   useState,
 } from 'react';
 import { createPortal } from 'react-dom';
-import css from './modal.module.css';
 import Modal from '../../src/components/Modal/Modal.jsx';
+import css from './modal.module.css';
 
 const modalContext = createContext();
 export const useModal = () => useContext(modalContext);
 
 export const ModalProvider = ({ children }) => {
   const [modalContent, setModalContent] = useState(null);
-    const backdropRef = useRef(null);
-    
+  const backdropRef = useRef(null);
+
   const closeModal = useCallback(e => {
     if (
       (e && e.target === e.currentTarget) ||
@@ -33,7 +33,7 @@ export const ModalProvider = ({ children }) => {
       }, 700);
     }
   }, []);
-    
+
   const openModal = content => {
     document.body.style.overflow = 'hidden';
     setModalContent(content);
@@ -43,8 +43,8 @@ export const ModalProvider = ({ children }) => {
         backdropRef.current.style.visibility = 'visible';
       }
     }, 0);
-    };
-    
+  };
+
   useEffect(() => {
     window.addEventListener('keydown', closeModal);
     const timer = setTimeout(() => {
@@ -53,13 +53,13 @@ export const ModalProvider = ({ children }) => {
         backdropRef.current.style.visibility = 'visible';
       }
     }, 0);
-      
+
     return () => {
       window.removeEventListener('keydown', closeModal);
       clearTimeout(timer);
     };
   }, [closeModal]);
-    
+
   return (
     <modalContext.Provider value={{ modalContent, openModal, closeModal }}>
       {children}

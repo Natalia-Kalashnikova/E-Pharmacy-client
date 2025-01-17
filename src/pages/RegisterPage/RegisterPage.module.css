@@ -1,8 +1,8 @@
 .wrapper {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   gap: 20px;
 
   @media screen and (min-width: 375px) {
@@ -10,13 +10,13 @@
   }
 
   @media screen and (min-width: 768px) {
-    max-width: 704px;
     align-items: flex-start;
+    max-width: 704px;
     gap: 54px;
   }
 
   @media screen and (min-width: 1440px) {
-    max-width: 1248px;
     flex-direction: row;
+    max-width: 1248px;
   }
 }

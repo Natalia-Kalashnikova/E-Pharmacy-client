@@ -1,9 +1,10 @@
 .wrapper {
-  box-sizing: border-box;
-  background-color: var(--primary-light-gray-color);
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
+
+  background-color: var(--primary-light-gray-color);
 
   @media screen and (min-width: 375px) {
     width: 375px;

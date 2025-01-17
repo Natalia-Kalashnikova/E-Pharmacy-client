@@ -1,21 +1,21 @@
-import { useState } from "react";
-import { useModal } from "../../context/modalContext.jsx";
-import LoginModal from "../LoginModal/LoginModal.jsx";
-import Icon from '../Icon/Icon.jsx';
-import css from './ProductOverview.module.css';
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useModal } from '../../context/modalContext.jsx';
+import LoginModal from '../LoginModal/LoginModal.jsx';
+import Icon from '../Icon/Icon.jsx';
 import { selectIsLoggedIn } from '../../redux/auth/selectors';
 import { fetchCart, updateCart } from '../../redux/cart/operations';
+import css from './ProductOverview.module.css';
 
-const ProductOverview = ({product}) => {
+const ProductOverview = ({ product }) => {
   const [quantity, setQuantity] = useState(1);
 
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const dispatch = useDispatch();
-  const { openModal } = useModal();  
-  
+  const { openModal } = useModal();
+
   const handleAddToCart = () => {
-    if (!isLoggedIn) {      
+    if (!isLoggedIn) {
       return openModal(<LoginModal />);
     }
     fetchData();
@@ -26,15 +26,17 @@ const ProductOverview = ({product}) => {
     ).unwrap();
     await dispatch(fetchCart()).unwrap();
   };
-  
+
   const handleAdd = () => {
     setQuantity(prevQuantity => prevQuantity + 1);
   };
+
   const handleRemove = () => {
     if (quantity > 1) {
       setQuantity(prevQuantity => prevQuantity - 1);
     }
   };
+
   return (
     <div className={css.wrapper}>
       <div className={css.imgWrapper}>
@@ -52,24 +54,21 @@ const ProductOverview = ({product}) => {
               aria-label="Add"
               type="button"
               className={css.buttonAddRemove}
-              onClick={handleAdd}
-            >
+              onClick={handleAdd}>
               <Icon iconId="icon-plus" className={css.icon} />
             </button>
             <p className={css.quantity}>{quantity}</p>
             <button
               type="button"
               className={css.buttonAddRemove}
-              onClick={handleRemove}
-            >
+              onClick={handleRemove}>
               <Icon iconId="icon-minus" className={css.icon} />
             </button>
           </div>
           <button
             type="button"
             className={css.buttonAddToCart}
-            onClick={handleAddToCart}
-          >
+            onClick={handleAddToCart}>
             Add to cart
           </button>
         </div>
@@ -77,4 +76,5 @@ const ProductOverview = ({product}) => {
     </div>
   );
 };
+
 export default ProductOverview;

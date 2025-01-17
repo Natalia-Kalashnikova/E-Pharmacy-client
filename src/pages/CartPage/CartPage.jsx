@@ -1,16 +1,16 @@
 import PlaceOrder from '../../components/PlaceOrder/PlaceOrder.jsx';
 import CartOverview from '../../components/CartOverview/CartOverview.jsx';
-import css from './CartPage.module.css';
 import { selectCart, selectIsLoading } from '../../redux/cart/selectors';
 import Loader from '../../components/Loader/Loader.jsx';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import css from './CartPage.module.css';
 
 const CartPage = () => {
   const isLoading = useSelector(selectIsLoading);
   const cart = useSelector(selectCart) || [];
   const navigate = useNavigate();
-  
+
   const handleStoreClick = () => {
     navigate('/medicine');
   };
@@ -25,8 +25,7 @@ const CartPage = () => {
             aria-label="To store"
             type="button"
             className={css.btnEmptyCart}
-            onClick={handleStoreClick}
-          >
+            onClick={handleStoreClick}>
             To store
           </button>
         </div>
@@ -38,7 +37,7 @@ const CartPage = () => {
         </>
       )}
     </div>
-  )
+  );
 };
 
 export default CartPage;

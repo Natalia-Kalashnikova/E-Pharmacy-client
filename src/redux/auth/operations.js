@@ -48,13 +48,13 @@ export const refreshUserAPI = createAsyncThunk(
   async (_, thunkApi) => {
     try {
       const state = thunkApi.getState();
-        const token = state.auth.token;
-        
-       if (!token) {
+      const token = state.auth.token;
+
+      if (!token) {
         return thunkApi.rejectWithValue('Token is not valid');
       }
-        setToken(token);
-        
+      setToken(token);
+
       const { data } = await instance.post('/user/refresh');
       return data;
     } catch (e) {
@@ -86,11 +86,11 @@ export const getUserInfoAPI = createAsyncThunk(
   async (_, thunkApi) => {
     try {
       const state = thunkApi.getState();
-        const token = state.auth.token;
-        
+      const token = state.auth.token;
+
       if (!token) return thunkApi.rejectWithValue('Token is not valid');
-        setToken(token);
-        
+      setToken(token);
+
       const { data } = await instance.get('/user/user-info');
       return data;
     } catch (e) {

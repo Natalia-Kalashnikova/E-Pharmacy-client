@@ -20,12 +20,12 @@ const MedicineStores = () => {
 
   const { headerRef } = useScrollContext();
 
-const scrollToHeader = useCallback(() => {
-  if (headerRef.current) {
-    headerRef.current.scrollIntoView({ behavior: 'smooth' });
-  }
-}, [headerRef]);
-  
+  const scrollToHeader = useCallback(() => {
+    if (headerRef.current) {
+      headerRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [headerRef]);
+
   const currentPage = useSelector(selectPage);
   const nearestStores = useSelector(selectNearestStores);
   const allStores = useSelector(selectStores);

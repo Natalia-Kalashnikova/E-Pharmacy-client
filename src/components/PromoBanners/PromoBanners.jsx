@@ -1,4 +1,4 @@
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import css from './PromoBanners.module.css';
 
 const PromoBanners = () => {
@@ -23,14 +23,9 @@ const PromoBanners = () => {
         </div>
         <div className={css.bottomWrap}>
           <p className={css.percentage}>100%</p>
-          <Link
-            to="https://goit.global/ua/terms-of-use/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={css.link}
-          >
+          <NavLink to="/feature" className={css.link}>
             Read more
-          </Link>
+          </NavLink>
         </div>
       </li>
       <li className={css.promoItem}>

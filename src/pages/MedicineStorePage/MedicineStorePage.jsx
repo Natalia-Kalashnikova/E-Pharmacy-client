@@ -1,8 +1,8 @@
-import MedicineStores from '../../components/MedicineStores/MedicineStores.jsx';
-import css from './MedicineStorePage.module.css';
-import { selectIsLoading } from '../../redux/stores/selectors.js';
-import Loader from '../../components/Loader/Loader.jsx';
 import { useSelector } from 'react-redux';
+import MedicineStores from '../../components/MedicineStores/MedicineStores.jsx';
+import Loader from '../../components/Loader/Loader.jsx';
+import { selectIsLoading } from '../../redux/stores/selectors.js';
+import css from './MedicineStorePage.module.css';
 
 const MedicineStorePage = () => {
   const isLoading = useSelector(selectIsLoading);
@@ -12,7 +12,7 @@ const MedicineStorePage = () => {
       {isLoading && <Loader />}
       <MedicineStores />
     </div>
-  )
+  );
 };
 
 export default MedicineStorePage;

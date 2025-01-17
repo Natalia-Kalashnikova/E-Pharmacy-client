@@ -15,6 +15,7 @@
   display: flex;
   gap: 8px;
   margin-top: 14px;
+
   @media screen and (min-width: 768px) {
     margin-top: 6px;
   }
@@ -27,11 +28,12 @@
 
 .storeInfo {
   max-width: 150px;
-  color: rgb(147, 147, 154);
+
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 0%;
   text-align: left;
+  color: rgb(147, 147, 154);
 
   @media screen and (min-width: 768px) {
     font-size: 16px;
@@ -84,15 +86,17 @@
 }
 
 .openFlag {
-  border-radius: 8px;
   padding: 8px 16px;
-  background: var(--primary-light-red-color);
-  color: var(--primary-dark-red-color);
+
   font-size: 12px;
   font-weight: 600;
   line-height: 18px;
   letter-spacing: -2%;
   text-align: center;
+  color: var(--primary-dark-red-color);
+
+  background: var(--primary-light-red-color);
+  border-radius: 8px;
 }
 
 .open {
@@ -104,8 +108,10 @@
   position: absolute;
   top: 32px;
   right: 32px;
+
   @media screen and (min-width: 768px) {
     position: static;
+
     display: flex;
     justify-content: space-between;
     margin-top: auto;
@@ -113,20 +119,24 @@
 }
 .button {
   display: none;
+
   @media screen and (min-width: 768px) {
     display: block;
     padding: 10px 16px;
-    border-radius: 24px;
-    background: var(--primary-green-color);
+
     transition: all var(--transition-duration) var(--transition-timing-function);
-    color: var(--primary-white-color);
     font-size: 14px;
     font-weight: 500;
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
+    color: var(--primary-white-color);
+    background: var(--primary-green-color);
+
+    border-radius: 24px;
   }
 }
+
 .button:hover {
   background-color: #3f945f;
 }

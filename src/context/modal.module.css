@@ -3,9 +3,12 @@
   top: 0;
   left: 0;
   z-index: 100;
+
   width: 100vw;
   height: 100vh;
+
   background-color: rgba(17, 18, 19, 0.4);
+
   overflow-y: auto;
   opacity: 0;
   visibility: hidden;
@@ -13,6 +16,7 @@
       var(--transition-timing-function),
     visibility var(--transition-duration) var(--transition-timing-function);
 }
+
 .modalBackdrop::-webkit-scrollbar {
   display: none;
 }

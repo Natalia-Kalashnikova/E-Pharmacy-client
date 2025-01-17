@@ -1,5 +1,9 @@
 import { createSlice, isAnyOf } from '@reduxjs/toolkit';
-import { fetchCategories, fetchProducts, fetchProductsById } from './operations';
+import {
+  fetchCategories,
+  fetchProducts,
+  fetchProductsById,
+} from './operations';
 
 const INITIAL_STATE = {
   products: [],
@@ -43,7 +47,7 @@ const productsSlice = createSlice({
         state.loading = false;
         state.selectedProduct = action.payload.data;
       })
-       .addCase(fetchCategories.fulfilled, (state, action) => {
+      .addCase(fetchCategories.fulfilled, (state, action) => {
         state.loading = false;
         state.categories = action.payload.data;
       })
@@ -56,7 +60,7 @@ const productsSlice = createSlice({
         handlePending
       )
       .addMatcher(
-         isAnyOf(
+        isAnyOf(
           fetchProducts.rejected,
           fetchProductsById.rejected,
           fetchCategories.rejected

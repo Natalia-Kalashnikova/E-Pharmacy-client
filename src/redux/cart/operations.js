@@ -46,7 +46,7 @@ export const checkoutCart = createAsyncThunk(
   'cart/checkoutCart',
   async ({ paymentMethod, shippingInfo }, thunkApi) => {
     try {
-       const state = thunkApi.getState();
+      const state = thunkApi.getState();
       const token = state.auth.token;
 
       if (!token) return thunkApi.rejectWithValue('Token is not valid');
@@ -56,7 +56,7 @@ export const checkoutCart = createAsyncThunk(
         paymentMethod,
         shippingInfo,
       });
-      
+
       toast.success('Order placed successfully');
       return response.data;
     } catch (error) {

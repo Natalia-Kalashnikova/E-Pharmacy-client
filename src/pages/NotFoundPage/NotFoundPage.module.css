@@ -1,25 +1,26 @@
 .wrapper {
-  height: calc(100vh - 82px);
-  padding: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 20px;
+  height: calc(100vh - 82px);
+  padding: 50px;
 
   @media screen and (min-width: 768px) {
     height: calc(100vh - 100px);
   }
+
   @media screen and (min-width: 1440px) {
     height: calc(100vh - 102px);
   }
 }
 
 .title {
-  color: var(--primary-dark-red-color);
   font-size: 40px;
   text-align: center;
   text-shadow: rgba(0, 0, 0, 0.055) 0px 5px 10px;
+  color: var(--primary-dark-red-color);
 }
 
 .link {
@@ -30,14 +31,17 @@
   height: 56px;
   margin: 0 auto;
   margin-top: 50px;
+  padding: 16px 32px 16px 32px;
+  box-sizing: border-box;
+
   font-weight: 500;
   line-height: 24px;
   letter-spacing: -0.5%;
-  padding: 16px 32px 16px 32px;
-  box-sizing: border-box;
+
+  background: transparent;
   border: 1px solid rgba(71, 84, 103, 0.2);
   border-radius: 200px;
-  background: transparent;
+
   transition: all 0.3s ease;
 }
 

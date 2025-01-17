@@ -1,33 +1,40 @@
+import { useDispatch, useSelector } from 'react-redux';
+import { useLocation } from 'react-router-dom';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
-import css from './PaginationComponent.module.css';
-import { useDispatch, useSelector } from 'react-redux';
 import { selectPage, selectTotalPages } from '../../redux/stores/selectors';
-import { useLocation } from 'react-router-dom';
-import { selectProductsPage, selectProductsTotalPages } from '../../redux/products/selectors';
+import {
+  selectProductsPage,
+  selectProductsTotalPages,
+} from '../../redux/products/selectors';
 import { changePage } from '../../redux/stores/slice';
 import { changeProductsPage } from '../../redux/products/slice';
 import { useScrollContext } from '../../context/ScrollContext.jsx';
+import css from './PaginationComponent.module.css';
 
 const PaginationComponent = () => {
   const dispatch = useDispatch();
-  let currentPage = 1;
-  const pageCount = useSelector(selectTotalPages) || 1;
-  const pageProductsCount = useSelector(selectProductsTotalPages) || 1;
   const location = useLocation();
   const { headerRef } = useScrollContext();
+
+  const storePage = useSelector(selectPage) || 1;
+  const productsPage = useSelector(selectProductsPage) || 1;
+  const totalStorePages = useSelector(selectTotalPages) || 1;
+  const totalProductsPages = useSelector(selectProductsTotalPages) || 1;
+
+  const currentPage =
+    location.pathname === '/medicine-store' ? storePage : productsPage;
+  const pageCount =
+    location.pathname === '/medicine-store'
+      ? totalStorePages
+      : totalProductsPages;
+
   const scrollToHeader = () => {
     if (headerRef.current) {
       headerRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
-  if (location.pathname === '/medicine-store') {
-    currentPage = useSelector(selectPage) || 1;
-  } else if (location.pathname === '/medicine') {
-    currentPage = useSelector(selectProductsPage) || 1;
-  }
-  
   const handleChange = (event, value) => {
     scrollToHeader();
     if (location.pathname === '/medicine-store') {
@@ -40,12 +47,9 @@ const PaginationComponent = () => {
   return (
     <div className={css.wrapper}>
       <Stack spacing={2} className={css.pagination}>
-         {(location.pathname === '/medicine' ? pageProductsCount : pageCount) >
-          1 && (
+        {pageCount > 1 && (
           <Pagination
-            count={
-              location.pathname === '/medicine' ? pageProductsCount : pageCount
-            }
+            count={pageCount}
             page={currentPage}
             onChange={handleChange}
             variant="outlined"
@@ -86,4 +90,5 @@ const PaginationComponent = () => {
     </div>
   );
 };
+
 export default PaginationComponent;

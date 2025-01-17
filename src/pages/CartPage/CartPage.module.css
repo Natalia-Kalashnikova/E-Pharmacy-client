@@ -1,9 +1,9 @@
 .wrapper {
-  width: 100%;
-  min-height: calc(100vh - 82px);
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  min-height: calc(100vh - 82px);
   gap: 80px;
   padding: 35px 0 80px;
 
@@ -14,22 +14,23 @@
   }
 
   @media screen and (min-width: 1440px) {
-    min-height: calc(100vh - 82px);
-    width: 1184px;
     flex-direction: row;
     align-items: flex-start;
+    min-height: calc(100vh - 82px);
+    width: 1184px;
     padding: 72px 0 120px;
     gap: 96px;
   }
 }
 
 .emptyCart {
-  height: 100%;
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
+  width: 100%;
   gap: 24px;
+
   background-image: image-set(
     url(../../images/background@1x.webp) 1x,
     url(../../images/background@2x.webp) 2x,
@@ -39,15 +40,19 @@
   background-repeat: no-repeat;
   background-position: calc(100% + 50px) calc(100% - 280px);
   background-size: 364px 249px;
+
   @media screen and (min-width: 768px) {
     min-height: calc(100vh - 100px);
+
     background-size: 464px 340px;
     background-position: calc(100% + 20px) calc(100% - 250px);
   }
+
   @media screen and (min-width: 1440px) {
     min-height: calc(100vh - 102px);
   }
 }
+
 .emptyCartText {
   font-size: 24px;
   line-height: 28px;
@@ -55,13 +60,16 @@
   letter-spacing: 0.04em;
   color: var(--primary-black-color);
 }
+
 .btnEmptyCart {
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 0.04em;
   color: var(--primary-green-color);
+
   transition: all var(--transition-duration) var(--transition-timing-function);
 }
+
 .btnEmptyCart:hover {
   text-decoration: underline;
 }

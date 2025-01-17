@@ -1,12 +1,12 @@
 import { NavLink } from 'react-router-dom';
-import css from './NavigationMenu.module.css';
 import clsx from 'clsx';
+import css from './NavigationMenu.module.css';
 
 const NavigationMenu = ({ toggleMenu = false }) => {
   const handleActiveLink = ({ isActive, customClass }) => {
     return clsx(css.link, customClass, { [css.active]: isActive });
   };
-  
+
   return (
     <nav className={css.wrapper}>
       <NavLink
@@ -14,8 +14,7 @@ const NavigationMenu = ({ toggleMenu = false }) => {
         className={({ isActive }) =>
           handleActiveLink({ isActive, customClass: css.linkHome })
         }
-        onClick={toggleMenu}
-      >
+        onClick={toggleMenu}>
         Home
       </NavLink>
       <NavLink
@@ -23,8 +22,7 @@ const NavigationMenu = ({ toggleMenu = false }) => {
         className={({ isActive }) =>
           handleActiveLink({ isActive, customClass: css.linkMedicineStore })
         }
-        onClick={toggleMenu}
-      >
+        onClick={toggleMenu}>
         Medicine store
       </NavLink>
       <NavLink
@@ -32,8 +30,7 @@ const NavigationMenu = ({ toggleMenu = false }) => {
         className={({ isActive }) =>
           handleActiveLink({ isActive, customClass: css.linkMedicine })
         }
-        onClick={toggleMenu}
-      >
+        onClick={toggleMenu}>
         Medicine
       </NavLink>
     </nav>

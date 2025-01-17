@@ -1,16 +1,18 @@
 .wrapper {
-  width: 100%;
-  min-height: calc(100vh - 82px);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 40px;
+  width: 100%;
+  min-height: calc(100vh - 82px);
   padding: 40px 0 80px;
+
   @media screen and (min-width: 768px) {
     min-height: calc(100vh - 100px);
     padding: 52px 0 120px;
     gap: 32px;
   }
+
   @media screen and (min-width: 1440px) {
     width: 1183px;
     min-height: calc(100vh - 102px);

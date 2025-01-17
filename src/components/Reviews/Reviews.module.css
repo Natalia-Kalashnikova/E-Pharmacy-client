@@ -10,13 +10,15 @@
 
 .reviewItem {
   position: relative;
+
   display: flex;
   flex-direction: column;
   gap: 14px;
+  padding: 14px 28px;
   box-sizing: border-box;
+
   border: 1px solid var(--secondary-white-color);
   border-radius: 20px;
-  padding: 14px 28px;
 }
 
 .nameWrapper {
@@ -25,14 +27,15 @@
 }
 
 .avatar {
-  width: 44px;
-  height: 44px;
-  border-radius: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--primary-light-green-color);
+  width: 44px;
+  height: 44px;
+
   color: var(--primary-green-color);
+  background-color: var(--primary-light-green-color);
+  border-radius: 30px;
 }
 
 .firstLetter {
@@ -60,17 +63,18 @@
 }
 
 .date {
-  color: rgba(29, 30, 33, 0.6);
   font-size: 12px;
   line-height: 18px;
   letter-spacing: 0px;
   text-align: left;
+  color: rgba(29, 30, 33, 0.6);
 }
 
 .ratingWrapper {
   position: absolute;
   top: 14px;
   right: 28px;
+
   display: flex;
   align-items: center;
   gap: 6px;
@@ -90,11 +94,11 @@
 }
 
 .text {
-  color: rgb(106, 106, 111);
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 0%;
   text-align: left;
+  color: rgb(106, 106, 111);
 
   @media screen and (min-width: 768px) {
     font-size: 16px;

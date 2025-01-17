@@ -33,39 +33,38 @@ const authSlice = createSlice({
   name: 'auth',
   initialState: AUTH_INITIAL_STATE,
   extraReducers: builder => {
-      builder
-        
-      
+    builder
+
       .addCase(registerAPI.fulfilled, (state, action) => {
         state.loading = false;
         state.isLoggedIn = true;
         state.token = action.payload.data.accessToken;
         state.userId = action.payload.data.userId;
       })
-      
+
       .addCase(loginAPI.fulfilled, (state, action) => {
         state.loading = false;
         state.isLoggedIn = true;
         state.token = action.payload.data.accessToken;
         state.userId = action.payload.data.userId;
       })
-      
+
       .addCase(refreshUserAPI.fulfilled, (state, action) => {
         state.token = action.payload.data.accessToken;
         state.userId = action.payload.data.userId;
         state.loading = false;
-        state.isLoggedIn = true;        
+        state.isLoggedIn = true;
       })
-     
+
       .addCase(getUserInfoAPI.fulfilled, (state, action) => {
         state.loading = false;
         state.userInfo = action.payload.data;
       })
-      
+
       .addCase(logoutAPI.fulfilled, () => {
         return AUTH_INITIAL_STATE;
       })
-      
+
       .addMatcher(
         isAnyOf(
           registerAPI.pending,
@@ -76,7 +75,7 @@ const authSlice = createSlice({
         ),
         handlePending
       )
-          
+
       .addMatcher(
         isAnyOf(
           registerAPI.rejected,

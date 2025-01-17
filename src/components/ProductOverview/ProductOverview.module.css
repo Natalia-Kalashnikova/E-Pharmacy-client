@@ -18,11 +18,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 14px 18px;
   box-sizing: border-box;
+
   border: 1.15px solid rgba(89, 177, 122, 0.6);
   border-radius: 20px;
+
   background-color: transparent;
-  padding: 14px 18px;
   overflow: hidden;
 
   @media screen and (min-width: 768px) {
@@ -50,18 +52,20 @@
 
 .descriptionWrapper {
   position: relative;
-  padding: 20px;
-  border-radius: 20px;
-  background: var(--primary-white-color);
+
   display: flex;
   flex-direction: column;
   gap: 32px;
+  padding: 20px;
+
+  background: var(--primary-white-color);
+  border-radius: 20px;
 
   @media screen and (min-width: 768px) {
-    padding: 32px;
-    box-sizing: border-box;
     width: 324px;
     gap: 32px;
+    padding: 32px;
+    box-sizing: border-box;
   }
 
   @media screen and (min-width: 1440px) {
@@ -89,17 +93,18 @@
 }
 
 .supplier {
-  color: rgba(29, 30, 33, 0.6);
   font-size: 12px;
   line-height: 18px;
   letter-spacing: 0px;
   text-align: left;
+  color: rgba(29, 30, 33, 0.6);
 }
 
 .price {
   position: absolute;
   top: 20px;
   right: 14px;
+
   font-weight: 600;
   line-height: 140%;
   letter-spacing: 0%;
@@ -107,6 +112,7 @@
 
   @media screen and (min-width: 768px) {
     position: static;
+
     font-size: 20px;
   }
 
@@ -131,15 +137,18 @@
 
 .buttonAddToCart {
   padding: 13px 32px;
-  border-radius: 24px;
-  background-color: var(--primary-green-color);
-  transition: all var(--transition-duration) var(--transition-timing-function);
-  color: var(--primary-white-color);
+
   font-size: 14px;
   font-weight: 500;
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
+  color: var(--primary-white-color);
+
+  background-color: var(--primary-green-color);
+  border-radius: 24px;
+
+  transition: all var(--transition-duration) var(--transition-timing-function);
 }
 
 .buttonAddToCart:hover {
@@ -147,13 +156,14 @@
 }
 
 .buttonAddRemoveWrapper {
-  width: 108px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 8px;
+  width: 108px;
   padding: 12px 18px;
   box-sizing: border-box;
+
   border: 1px solid rgba(29, 30, 33, 0.1);
   border-radius: 60px;
 }
