@@ -30,6 +30,12 @@
   border-radius: 60px;
 }
 
+.link:hover,
+.link:focus {
+  background-color: var(--primary-green-color);
+  color: var(--primary-white-color);
+}
+
 .wrapper .link:not(:last-child)::after {
   position: absolute;
   bottom: -13px;
