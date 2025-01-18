@@ -23,7 +23,7 @@ const PromoBanners = () => {
         </div>
         <div className={css.bottomWrap}>
           <p className={css.percentage}>100%</p>
-          <NavLink to="/feature" className={css.link}>
+          <NavLink to="/medicine" className={css.link}>
             Read more
           </NavLink>
         </div>
